@@ -170,7 +170,7 @@ extension IngestViewController {
                                       change: [NSKeyValueChangeKey: Any]?,
                                       context: UnsafeMutableRawPointer?) {
         if Thread.isMainThread {
-            debugPrint("### 123 stream.currentFPS=\(stream.currentFPS) info=\(stream.info)")
+            debugPrint("stream.currentFPS=\(stream.currentFPS) info=\(stream.info)")
         }
     }
 }
@@ -178,11 +178,11 @@ extension IngestViewController {
 extension IngestViewController: StreamIngestDelegate {
     
     func streamIngestDidStartPublishing(_ streamIngest: StreamIngest) {
-        debugPrint("### streamIngestDidStartPublishing")
+        debugPrint("streamIngestDidStartPublishing")
     }
     
     func streamIngestDidStopPublishing(_ streamIngest: StreamIngest) {
-        debugPrint("### streamIngestDidStopPublishing")
+        debugPrint("streamIngestDidStopPublishing")
     }
     
     func streamIngestDidFailToPublish(_ streamIngest: StreamIngest) {
