@@ -56,6 +56,12 @@ stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
     debugPrint("attaching audio with error=\(String(describing: error))")
 }
 
+// Attach video device
+let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition)
+stream.attachCamera(camera, channel: 0) { error in
+    debugPrint("attaching camera with error=\(String(describing: error))")
+}
+
 // Ingesting your stream
 stream.startPublish(rtmpUrl: "Your RTMP URL", stream: "Your stream name")
 ```
