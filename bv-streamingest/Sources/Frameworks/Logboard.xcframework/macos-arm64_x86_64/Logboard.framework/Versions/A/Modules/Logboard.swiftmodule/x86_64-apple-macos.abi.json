@@ -1,0 +1,3897 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LBLoggerAppender",
+        "printedName": "LBLoggerAppender",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard16LBLoggerAppenderP6append_5level7message4file8function4lineyAA0B0C_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP6append_5level7message4file8function4lineyAA0B0C_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "moduleName": "Logboard",
+            "genericSig": "<τ_0_0 where τ_0_0 : Logboard.LBLoggerAppender>",
+            "sugared_genericSig": "<Self where Self : Logboard.LBLoggerAppender>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard16LBLoggerAppenderP6append_5level6format9arguments4file8function4lineyAA0B0C_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP6append_5level6format9arguments4file8function4lineyAA0B0C_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "moduleName": "Logboard",
+            "genericSig": "<τ_0_0 where τ_0_0 : Logboard.LBLoggerAppender>",
+            "sugared_genericSig": "<Self where Self : Logboard.LBLoggerAppender>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8Logboard16LBLoggerAppenderP",
+        "mangledName": "$s8Logboard16LBLoggerAppenderP",
+        "moduleName": "Logboard",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "Import",
+        "name": "OSLog",
+        "printedName": "OSLog",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSLoggerAppender",
+        "printedName": "OSLoggerAppender",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(sybsystem:category:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSLoggerAppender",
+                "printedName": "Logboard.OSLoggerAppender",
+                "usr": "s:8Logboard16OSLoggerAppenderC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8Logboard16OSLoggerAppenderC9sybsystem8categoryACSS_SStcfc",
+            "mangledName": "$s8Logboard16OSLoggerAppenderC9sybsystem8categoryACSS_SStcfc",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard16OSLoggerAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "mangledName": "$s8Logboard16OSLoggerAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard16OSLoggerAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "mangledName": "$s8Logboard16OSLoggerAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8Logboard16OSLoggerAppenderC",
+        "mangledName": "$s8Logboard16OSLoggerAppenderC",
+        "moduleName": "Logboard",
+        "intro_Macosx": "11.0",
+        "intro_iOS": "14.0",
+        "intro_tvOS": "14.0",
+        "intro_watchOS": "7.0",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LBLoggerAppender",
+            "printedName": "LBLoggerAppender",
+            "usr": "s:8Logboard16LBLoggerAppenderP",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NullAppender",
+        "printedName": "NullAppender",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NullAppender",
+                "printedName": "Logboard.NullAppender",
+                "usr": "s:8Logboard12NullAppenderC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Logboard12NullAppenderC6sharedACvpZ",
+            "mangledName": "$s8Logboard12NullAppenderC6sharedACvpZ",
+            "moduleName": "Logboard",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NullAppender",
+                    "printedName": "Logboard.NullAppender",
+                    "usr": "s:8Logboard12NullAppenderC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard12NullAppenderC6sharedACvgZ",
+                "mangledName": "$s8Logboard12NullAppenderC6sharedACvgZ",
+                "moduleName": "Logboard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard12NullAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "mangledName": "$s8Logboard12NullAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard12NullAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "mangledName": "$s8Logboard12NullAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8Logboard12NullAppenderC",
+        "mangledName": "$s8Logboard12NullAppenderC",
+        "moduleName": "Logboard",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LBLoggerAppender",
+            "printedName": "LBLoggerAppender",
+            "usr": "s:8Logboard16LBLoggerAppenderP",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MultiAppender",
+        "printedName": "MultiAppender",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "appenders",
+            "printedName": "appenders",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Logboard.LBLoggerAppender]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LBLoggerAppender",
+                    "printedName": "Logboard.LBLoggerAppender",
+                    "usr": "s:8Logboard16LBLoggerAppenderP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvp",
+            "mangledName": "$s8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvp",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Logboard.LBLoggerAppender]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LBLoggerAppender",
+                        "printedName": "Logboard.LBLoggerAppender",
+                        "usr": "s:8Logboard16LBLoggerAppenderP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvg",
+                "mangledName": "$s8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvg",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Logboard.LBLoggerAppender]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LBLoggerAppender",
+                        "printedName": "Logboard.LBLoggerAppender",
+                        "usr": "s:8Logboard16LBLoggerAppenderP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvs",
+                "mangledName": "$s8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvs",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvM",
+                "mangledName": "$s8Logboard13MultiAppenderC9appendersSayAA08LBLoggerC0_pGvM",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MultiAppender",
+                "printedName": "Logboard.MultiAppender",
+                "usr": "s:8Logboard13MultiAppenderC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8Logboard13MultiAppenderCACycfc",
+            "mangledName": "$s8Logboard13MultiAppenderCACycfc",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard13MultiAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "mangledName": "$s8Logboard13MultiAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard13MultiAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "mangledName": "$s8Logboard13MultiAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8Logboard13MultiAppenderC",
+        "mangledName": "$s8Logboard13MultiAppenderC",
+        "moduleName": "Logboard",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LBLoggerAppender",
+            "printedName": "LBLoggerAppender",
+            "usr": "s:8Logboard16LBLoggerAppenderP",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LBLogger",
+        "printedName": "LBLogger",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "dateFormatter",
+            "printedName": "dateFormatter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DateFormatter",
+                "printedName": "Foundation.DateFormatter",
+                "usr": "c:objc(cs)NSDateFormatter"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvpZ",
+            "mangledName": "$s8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvpZ",
+            "moduleName": "Logboard",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateFormatter",
+                    "printedName": "Foundation.DateFormatter",
+                    "usr": "c:objc(cs)NSDateFormatter"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvgZ",
+                "mangledName": "$s8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvgZ",
+                "moduleName": "Logboard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DateFormatter",
+                    "printedName": "Foundation.DateFormatter",
+                    "usr": "c:objc(cs)NSDateFormatter"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvsZ",
+                "mangledName": "$s8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvsZ",
+                "moduleName": "Logboard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvMZ",
+                "mangledName": "$s8Logboard8LBLoggerC13dateFormatterSo06NSDateD0CvMZ",
+                "moduleName": "Logboard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Level",
+            "printedName": "Level",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "trace",
+                "printedName": "trace",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Logboard.LBLogger.Level.Type) -> Logboard.LBLogger.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Logboard.LBLogger.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "Logboard.LBLogger.Level",
+                            "usr": "s:8Logboard8LBLoggerC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8Logboard8LBLoggerC5LevelO5traceyA2EmF",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO5traceyA2EmF",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "debug",
+                "printedName": "debug",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Logboard.LBLogger.Level.Type) -> Logboard.LBLogger.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Logboard.LBLogger.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "Logboard.LBLogger.Level",
+                            "usr": "s:8Logboard8LBLoggerC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8Logboard8LBLoggerC5LevelO5debugyA2EmF",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO5debugyA2EmF",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "info",
+                "printedName": "info",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Logboard.LBLogger.Level.Type) -> Logboard.LBLogger.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Logboard.LBLogger.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "Logboard.LBLogger.Level",
+                            "usr": "s:8Logboard8LBLoggerC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8Logboard8LBLoggerC5LevelO4infoyA2EmF",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO4infoyA2EmF",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "warn",
+                "printedName": "warn",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Logboard.LBLogger.Level.Type) -> Logboard.LBLogger.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Logboard.LBLogger.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "Logboard.LBLogger.Level",
+                            "usr": "s:8Logboard8LBLoggerC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8Logboard8LBLoggerC5LevelO4warnyA2EmF",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO4warnyA2EmF",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "error",
+                "printedName": "error",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Logboard.LBLogger.Level.Type) -> Logboard.LBLogger.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "Logboard.LBLogger.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "Logboard.LBLogger.Level",
+                            "usr": "s:8Logboard8LBLoggerC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:8Logboard8LBLoggerC5LevelO5erroryA2EmF",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO5erroryA2EmF",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(string:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Logboard.LBLogger.Level?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8Logboard8LBLoggerC5LevelO6stringAESgSS_tcfc",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO6stringAESgSS_tcfc",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC5LevelO11descriptionSSvp",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO11descriptionSSvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC5LevelO11descriptionSSvg",
+                    "mangledName": "$s8Logboard8LBLoggerC5LevelO11descriptionSSvg",
+                    "moduleName": "Logboard",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Logboard.LBLogger.Level?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8Logboard8LBLoggerC5LevelO8rawValueAESgSi_tcfc",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO8rawValueAESgSi_tcfc",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC5LevelO8rawValueSivp",
+                "mangledName": "$s8Logboard8LBLoggerC5LevelO8rawValueSivp",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC5LevelO8rawValueSivg",
+                    "mangledName": "$s8Logboard8LBLoggerC5LevelO8rawValueSivg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:8Logboard8LBLoggerC5LevelO",
+            "mangledName": "$s8Logboard8LBLoggerC5LevelO",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "with",
+            "printedName": "with(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC4withyACSSFZ",
+            "mangledName": "$s8Logboard8LBLoggerC4withyACSSFZ",
+            "moduleName": "Logboard",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Logboard8LBLoggerC10identifierSSvp",
+            "mangledName": "$s8Logboard8LBLoggerC10identifierSSvp",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC10identifierSSvg",
+                "mangledName": "$s8Logboard8LBLoggerC10identifierSSvg",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "level",
+            "printedName": "level",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Logboard8LBLoggerC5levelAC5LevelOvp",
+            "mangledName": "$s8Logboard8LBLoggerC5levelAC5LevelOvp",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Level",
+                    "printedName": "Logboard.LBLogger.Level",
+                    "usr": "s:8Logboard8LBLoggerC5LevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC5levelAC5LevelOvg",
+                "mangledName": "$s8Logboard8LBLoggerC5levelAC5LevelOvg",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Level",
+                    "printedName": "Logboard.LBLogger.Level",
+                    "usr": "s:8Logboard8LBLoggerC5LevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC5levelAC5LevelOvs",
+                "mangledName": "$s8Logboard8LBLoggerC5levelAC5LevelOvs",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC5levelAC5LevelOvM",
+                "mangledName": "$s8Logboard8LBLoggerC5levelAC5LevelOvM",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "appender",
+            "printedName": "appender",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LBLoggerAppender",
+                "printedName": "Logboard.LBLoggerAppender",
+                "usr": "s:8Logboard16LBLoggerAppenderP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Logboard8LBLoggerC8appenderAA0B8Appender_pvp",
+            "mangledName": "$s8Logboard8LBLoggerC8appenderAA0B8Appender_pvp",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LBLoggerAppender",
+                    "printedName": "Logboard.LBLoggerAppender",
+                    "usr": "s:8Logboard16LBLoggerAppenderP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC8appenderAA0B8Appender_pvg",
+                "mangledName": "$s8Logboard8LBLoggerC8appenderAA0B8Appender_pvg",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LBLoggerAppender",
+                    "printedName": "Logboard.LBLoggerAppender",
+                    "usr": "s:8Logboard16LBLoggerAppenderP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC8appenderAA0B8Appender_pvs",
+                "mangledName": "$s8Logboard8LBLoggerC8appenderAA0B8Appender_pvs",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Logboard8LBLoggerC8appenderAA0B8Appender_pvM",
+                "mangledName": "$s8Logboard8LBLoggerC8appenderAA0B8Appender_pvM",
+                "moduleName": "Logboard",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8Logboard8LBLoggerCyACSScfc",
+            "mangledName": "$s8Logboard8LBLoggerCyACSScfc",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "isEnabledFor",
+            "printedName": "isEnabledFor(level:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC12isEnabledFor5levelSbAC5LevelO_tF",
+            "mangledName": "$s8Logboard8LBLoggerC12isEnabledFor5levelSbAC5LevelO_tF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trace",
+            "printedName": "trace(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC5trace_4file8function4lineyypd_s12StaticStringVAISitF",
+            "mangledName": "$s8Logboard8LBLoggerC5trace_4file8function4lineyypd_s12StaticStringVAISitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trace",
+            "printedName": "trace(format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC5trace6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "mangledName": "$s8Logboard8LBLoggerC5trace6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debug",
+            "printedName": "debug(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC5debug_4file8function4lineyypd_s12StaticStringVAISitF",
+            "mangledName": "$s8Logboard8LBLoggerC5debug_4file8function4lineyypd_s12StaticStringVAISitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debug",
+            "printedName": "debug(format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC5debug6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "mangledName": "$s8Logboard8LBLoggerC5debug6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "info",
+            "printedName": "info(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC4info_4file8function4lineyypd_s12StaticStringVAISitF",
+            "mangledName": "$s8Logboard8LBLoggerC4info_4file8function4lineyypd_s12StaticStringVAISitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "info",
+            "printedName": "info(format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC4info6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "mangledName": "$s8Logboard8LBLoggerC4info6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warn",
+            "printedName": "warn(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC4warn_4file8function4lineyypd_s12StaticStringVAISitF",
+            "mangledName": "$s8Logboard8LBLoggerC4warn_4file8function4lineyypd_s12StaticStringVAISitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warn",
+            "printedName": "warn(format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC4warn6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "mangledName": "$s8Logboard8LBLoggerC4warn6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(_:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC5error_4file8function4lineyypd_s12StaticStringVAISitF",
+            "mangledName": "$s8Logboard8LBLoggerC5error_4file8function4lineyypd_s12StaticStringVAISitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "error",
+            "printedName": "error(format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard8LBLoggerC5error6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "mangledName": "$s8Logboard8LBLoggerC5error6format9arguments4file8function4lineySS_s7CVarArg_ps12StaticStringVALSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Data",
+            "printedName": "Data",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "date",
+                "printedName": "date",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV4date10Foundation4DateVvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV4date10Foundation4DateVvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV4date10Foundation4DateVvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV4date10Foundation4DateVvg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "level",
+                "printedName": "level",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Level",
+                    "printedName": "Logboard.LBLogger.Level",
+                    "usr": "s:8Logboard8LBLoggerC5LevelO"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV5levelAC5LevelOvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV5levelAC5LevelOvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "Logboard.LBLogger.Level",
+                        "usr": "s:8Logboard8LBLoggerC5LevelO"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV5levelAC5LevelOvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV5levelAC5LevelOvg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "identifier",
+                "printedName": "identifier",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV10identifierSSvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV10identifierSSvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV10identifierSSvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV10identifierSSvg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "file",
+                "printedName": "file",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV4fileSSvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV4fileSSvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV4fileSSvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV4fileSSvg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "line",
+                "printedName": "line",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV4lineSivp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV4lineSivp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV4lineSivg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV4lineSivg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "function",
+                "printedName": "function",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV8functionSSvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV8functionSSvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV8functionSSvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV8functionSSvg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "message",
+                "printedName": "message",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV7messageSSvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV7messageSSvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV7messageSSvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV7messageSSvg",
+                    "moduleName": "Logboard",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Logboard.LBLogger.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Logboard.LBLogger.Data",
+                        "usr": "s:8Logboard8LBLoggerC4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:8Logboard8LBLoggerC4DataVyAESg10FoundationADVcfc",
+                "mangledName": "$s8Logboard8LBLoggerC4DataVyAESg10FoundationADVcfc",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:8Logboard8LBLoggerC4DataV11descriptionSSvp",
+                "mangledName": "$s8Logboard8LBLoggerC4DataV11descriptionSSvp",
+                "moduleName": "Logboard",
+                "declAttributes": [
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isFromExtension": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:8Logboard8LBLoggerC4DataV11descriptionSSvg",
+                    "mangledName": "$s8Logboard8LBLoggerC4DataV11descriptionSSvg",
+                    "moduleName": "Logboard",
+                    "isFromExtension": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:8Logboard8LBLoggerC4DataV",
+            "mangledName": "$s8Logboard8LBLoggerC4DataV",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8Logboard8LBLoggerC",
+        "mangledName": "$s8Logboard8LBLoggerC",
+        "moduleName": "Logboard",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ConsoleAppender",
+        "printedName": "ConsoleAppender",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConsoleAppender",
+                "printedName": "Logboard.ConsoleAppender",
+                "usr": "s:8Logboard15ConsoleAppenderC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8Logboard15ConsoleAppenderCACycfc",
+            "mangledName": "$s8Logboard15ConsoleAppenderCACycfc",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard15ConsoleAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "mangledName": "$s8Logboard15ConsoleAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard15ConsoleAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "mangledName": "$s8Logboard15ConsoleAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8Logboard15ConsoleAppenderC",
+        "mangledName": "$s8Logboard15ConsoleAppenderC",
+        "moduleName": "Logboard",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LBLoggerAppender",
+            "printedName": "LBLoggerAppender",
+            "usr": "s:8Logboard16LBLoggerAppenderP",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Logboard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketAppender",
+        "printedName": "SocketAppender",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketAppender",
+                "printedName": "Logboard.SocketAppender",
+                "usr": "s:8Logboard14SocketAppenderC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8Logboard14SocketAppenderCACycfc",
+            "mangledName": "$s8Logboard14SocketAppenderCACycfc",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(_:port:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard14SocketAppenderC7connect_4portySS_SitF",
+            "mangledName": "$s8Logboard14SocketAppenderC7connect_4portySS_SitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard14SocketAppenderC5closeyyF",
+            "mangledName": "$s8Logboard14SocketAppenderC5closeyyF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:message:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard14SocketAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "mangledName": "$s8Logboard14SocketAppenderC6append_5level7message4file8function4lineyAA8LBLoggerC_AK5LevelOSayypGs12StaticStringVAPSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "append",
+            "printedName": "append(_:level:format:arguments:file:function:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LBLogger",
+                "printedName": "Logboard.LBLogger",
+                "usr": "s:8Logboard8LBLoggerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "Logboard.LBLogger.Level",
+                "usr": "s:8Logboard8LBLoggerC5LevelO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CVarArg",
+                "printedName": "Swift.CVarArg",
+                "usr": "s:s7CVarArgP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Logboard14SocketAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "mangledName": "$s8Logboard14SocketAppenderC6append_5level6format9arguments4file8function4lineyAA8LBLoggerC_AL5LevelOSSs7CVarArg_ps12StaticStringVAQSitF",
+            "moduleName": "Logboard",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8Logboard14SocketAppenderC",
+        "mangledName": "$s8Logboard14SocketAppenderC",
+        "moduleName": "Logboard",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LBLoggerAppender",
+            "printedName": "LBLoggerAppender",
+            "usr": "s:8Logboard16LBLoggerAppenderP",
+            "mangledName": "$s8Logboard16LBLoggerAppenderP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 728,
+      "length": 4,
+      "value": "\"\t\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 735,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 870,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 934,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 989,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1027,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1069,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1077,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1117,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1151,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1175,
+      "length": 4,
+      "value": "\"\t\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1340,
+      "length": 126,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1385,
+      "length": 1,
+      "value": "\" [\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1395,
+      "length": 1,
+      "value": "\"] [\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1411,
+      "length": 1,
+      "value": "\"] [\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1431,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1439,
+      "length": 1,
+      "value": "\"] \""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1452,
+      "length": 1,
+      "value": "\" > \""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.Data.swift",
+      "kind": "StringLiteral",
+      "offset": 1465,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 805,
+      "length": 41,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 836,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 844,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 896,
+      "length": 3,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 972,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1045,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1074,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1123,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1152,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1199,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1228,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1278,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1307,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1356,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1385,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1604,
+      "length": 41,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1635,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1643,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1695,
+      "length": 3,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1816,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1845,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1894,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1923,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1970,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1999,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 2049,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 2078,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 2127,
+      "length": 30,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/OSLoggerAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 2156,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/MultiAppender.swift",
+      "kind": "Array",
+      "offset": 377,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 101,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 445,
+      "length": 25,
+      "value": "\"yyyy-dd-MM HH:mm:ss.SSS\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 644,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 700,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 761,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 819,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 875,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1010,
+      "length": 7,
+      "value": "\"Trace\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1066,
+      "length": 7,
+      "value": "\"Debug\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1122,
+      "length": 6,
+      "value": "\"Info\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1176,
+      "length": 6,
+      "value": "\"Warn\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1230,
+      "length": 7,
+      "value": "\"Error\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1517,
+      "length": 7,
+      "value": "\"Trace\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1573,
+      "length": 7,
+      "value": "\"Debug\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1628,
+      "length": 6,
+      "value": "\"Info\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1682,
+      "length": 6,
+      "value": "\"Warn\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "StringLiteral",
+      "offset": 1737,
+      "length": 7,
+      "value": "\"Error\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 644,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 700,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 761,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 819,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 875,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 644,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 700,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 761,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 819,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "IntegerLiteral",
+      "offset": 875,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/LBLogger.swift",
+      "kind": "Dictionary",
+      "offset": 1831,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 420,
+      "length": 12,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 430,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 434,
+      "length": 26,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 458,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 462,
+      "length": 41,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 493,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 501,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 515,
+      "length": 3,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 578,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 814,
+      "length": 12,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 824,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 828,
+      "length": 26,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 852,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 856,
+      "length": 41,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 887,
+      "length": 1,
+      "value": "\":\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 895,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/ConsoleAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 909,
+      "length": 3,
+      "value": "\">\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 509,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 979,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1048,
+      "length": 4,
+      "value": "\"\t\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1056,
+      "length": 10,
+      "value": "\"\r\n\r\n\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1667,
+      "length": 4,
+      "value": "\"\t\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 1675,
+      "length": 10,
+      "value": "\"\r\n\r\n\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1834,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2013,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 2245,
+      "length": 43,
+      "value": "\"com.haishinkit.HaishinKit.NetSocket.input\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "StringLiteral",
+      "offset": 2429,
+      "length": 44,
+      "value": "\"com.haishinkit.HaishinKit.NetSocket.output\""
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3702,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3870,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4333,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4517,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4624,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5271,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5633,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6427,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7068,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7383,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jaylo\/Downloads\/HaishinKit\/Carthage\/Checkouts\/Logboard\/Sources\/Logboard\/SocketAppender.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7476,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

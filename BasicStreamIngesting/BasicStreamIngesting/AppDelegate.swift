@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let session = AVAudioSession.sharedInstance()
+        do {
+            // If you set the "mode" parameter, stereo capture is not possible, so it is left unspecified.
+            try session.setCategory(.playAndRecord, options: [.defaultToSpeaker, .allowBluetooth])
+            try session.setActive(true)
+        } catch {
+            print("Set audio session error = \(error)")
+        }
         return true
     }
 

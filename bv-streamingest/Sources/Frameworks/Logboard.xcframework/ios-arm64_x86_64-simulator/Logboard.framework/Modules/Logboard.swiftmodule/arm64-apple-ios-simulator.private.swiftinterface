@@ -1,0 +1,104 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Logboard
+// swift-module-flags-ignorable: -enable-upcoming-feature ExistentialAny -enable-bare-slash-regex
+import Foundation
+import OSLog
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Logboard.LBLogger {
+  public struct Data {
+    public let date: Foundation.Date
+    public let level: Logboard.LBLogger.Level
+    public let identifier: Swift.String
+    public let file: Swift.String
+    public let line: Swift.Int
+    public let function: Swift.String
+    public let message: Swift.String
+    public init?(_ data: Foundation.Data)
+  }
+}
+extension Logboard.LBLogger.Data : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol LBLoggerAppender {
+  func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, message: [Any], file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+}
+@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+public class OSLoggerAppender : Logboard.LBLoggerAppender {
+  public init(sybsystem: Swift.String, category: Swift.String)
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, message: [Any], file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NullAppender : Logboard.LBLoggerAppender {
+  public static let shared: Logboard.NullAppender
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, message: [Any], file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  @objc deinit
+}
+public class MultiAppender : Logboard.LBLoggerAppender {
+  public var appenders: [any Logboard.LBLoggerAppender]
+  public init()
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, message: [Any], file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  @objc deinit
+}
+public class LBLogger {
+  public static var dateFormatter: Foundation.DateFormatter
+  public enum Level : Swift.Int, Swift.CustomStringConvertible {
+    case trace
+    case debug
+    case info
+    case warn
+    case error
+    public init?(string: Swift.String)
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static func with(_ identifier: Swift.String) -> Logboard.LBLogger
+  final public let identifier: Swift.String
+  public var level: Logboard.LBLogger.Level
+  public var appender: any Logboard.LBLoggerAppender
+  public init(_ identifier: Swift.String)
+  public func isEnabledFor(level: Logboard.LBLogger.Level) -> Swift.Bool
+  public func trace(_ message: Any..., file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func trace(format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func debug(_ message: Any..., file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func debug(format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func info(_ message: Any..., file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func info(format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func warn(_ message: Any..., file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func warn(format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func error(_ message: Any..., file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  public func error(format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString = #file, function: Swift.StaticString = #function, line: Swift.Int = #line)
+  @objc deinit
+}
+public class ConsoleAppender : Logboard.LBLoggerAppender {
+  public init()
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, message: [Any], file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  @objc deinit
+}
+public class SocketAppender : Logboard.LBLoggerAppender {
+  public init()
+  public func connect(_ name: Swift.String, port: Swift.Int)
+  public func close()
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, message: [Any], file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  public func append(_ logboard: Logboard.LBLogger, level: Logboard.LBLogger.Level, format: Swift.String, arguments: any Swift.CVarArg, file: Swift.StaticString, function: Swift.StaticString, line: Swift.Int)
+  @objc deinit
+}
+extension Logboard.LBLogger.Level : Swift.Equatable {}
+extension Logboard.LBLogger.Level : Swift.Hashable {}
+extension Logboard.LBLogger.Level : Swift.RawRepresentable {}
