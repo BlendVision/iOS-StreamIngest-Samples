@@ -56,12 +56,6 @@ stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
     debugPrint("attaching audio with error=\(String(describing: error))")
 }
 
-// Attach video device
-let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition)
-stream.attachCamera(camera, channel: 0) { error in
-    debugPrint("attaching camera with error=\(String(describing: error))")
-}
-
 // Ingesting your stream
 stream.startPublish(rtmpUrl: "Your RTMP URL", stream: "Your stream name")
 ```
@@ -75,12 +69,25 @@ stream.attachCamera(camera, channel: 0) { error in
     debugPrint("attaching camera with error=\(String(describing: error))")
 }
 ```
+### Stream Ingest Quality Settings
+Predefined settings configurations used to configure the quality of video streaming ingestion. 
+These configurations are:
+
+- StreamIngestQualityLow(): This setting configures the ingestion quality to be low, which may reduce the resolution or frame rate of the video to conserve bandwidth and network traffic.
+
+- StreamIngestQualityMedium(): This setting provides a balanced option suitable for most scenarios, maintaining good video quality while not excessively consuming bandwidth.
+
+- StreamIngestQualityHigh(): This setting is ideal for scenarios requiring high definition and high frame rates, offering superior video quality but potentially consuming more bandwidth and network resources.
+
+
 ### Audio Settings
 ```swift
+let quality = StreamIngestQualityMedium()
 stream.audioBitrate = quality.audioBitRate
 ```
 ### Video Settings
 ```swift
+let quality = StreamIngestQualityMedium()
 stream.videoSize = quality.videoSize
 stream.videoBitrate = quality.videoBitRate
 ```
