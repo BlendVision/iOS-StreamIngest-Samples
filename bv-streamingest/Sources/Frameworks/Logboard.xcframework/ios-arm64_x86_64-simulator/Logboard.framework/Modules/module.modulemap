@@ -1,4 +1,0 @@
-framework module Logboard {
-  header "Logboard-Swift.h"
-  requires objc
-}

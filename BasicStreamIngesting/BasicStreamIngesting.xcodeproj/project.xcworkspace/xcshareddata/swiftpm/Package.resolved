@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "bv-streamingest",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BlendVision/bv-streamingest",
+      "state" : {
+        "revision" : "93ef85fc1dcfa84f75a7a05e019ccb6f6091baf2",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
