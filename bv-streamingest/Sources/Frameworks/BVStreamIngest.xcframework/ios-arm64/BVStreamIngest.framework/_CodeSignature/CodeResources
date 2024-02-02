@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		AtvG9YawTgW9+7tiIi1vJaBGvzc=
+		Ju+GU31j5Ml7O5NX02zna2gCbw8=
 		</data>
 		<key>Modules/BVStreamIngest.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		Dt6azecyVK+ehmvae77B8NXI7Q0=
+		ixwzxO5NKutw8Sbf23HossvInCM=
 		</data>
 		<key>Modules/BVStreamIngest.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/BVStreamIngest.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		n+cxByojAkOC4O6UEWd00GskgTY=
+		KDqp0G6N17WHoNR1CVX4iJcXXzo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -61,7 +61,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rQHUK6evIBtsTB18vGOZR5K1+VIiyF+D0L0kqMl5nl4=
+			1R5k6OriLxulCPkBCKWY8Dw8jCAbuGmCgsPbd2u7+Jg=
 			</data>
 		</dict>
 		<key>Modules/BVStreamIngest.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uwaHFPFJqNPDmLmONUoS7l57zx8q+le78qtc+/+Qh0E=
+			dxleytvZbzk7Deozdy3THdD9vIqTusJ+TN5BwVxqQME=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0C0B872B6CC24A0058477B /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C0C0B862B6CC24A0058477B /* bv-streamingest */; };
 		0C7AC9DC2B5902ED00993D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9DB2B5902ED00993D61 /* AppDelegate.swift */; };
 		0C7AC9DE2B5902ED00993D61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9DD2B5902ED00993D61 /* SceneDelegate.swift */; };
 		0C7AC9E02B5902ED00993D61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9DF2B5902ED00993D61 /* ViewController.swift */; };
 		0C7AC9E32B5902ED00993D61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7AC9E12B5902ED00993D61 /* Main.storyboard */; };
 		0C7AC9E52B5902EE00993D61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7AC9E42B5902EE00993D61 /* Assets.xcassets */; };
 		0C7AC9E82B5902EE00993D61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7AC9E62B5902EE00993D61 /* LaunchScreen.storyboard */; };
-		0C7AC9F52B5903BA00993D61 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C7AC9F42B5903BA00993D61 /* bv-streamingest */; };
 		0C7AC9F72B59058500993D61 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9F62B59058500993D61 /* Preference.swift */; };
 		0C7AC9F92B5905DC00993D61 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9F82B5905DC00993D61 /* ControlView.swift */; };
 		0C7AC9FC2B5905FE00993D61 /* IngestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9FA2B5905FE00993D61 /* IngestViewController.swift */; };
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C7AC9F52B5903BA00993D61 /* bv-streamingest in Frameworks */,
+				0C0C0B872B6CC24A0058477B /* bv-streamingest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			);
 			name = BasicStreamIngesting;
 			packageProductDependencies = (
-				0C7AC9F42B5903BA00993D61 /* bv-streamingest */,
+				0C0C0B862B6CC24A0058477B /* bv-streamingest */,
 			);
 			productName = BasicStreamIngesting;
 			productReference = 0C7AC9D92B5902ED00993D61 /* BasicStreamIngesting.app */;
@@ -151,7 +151,7 @@
 			);
 			mainGroup = 0C7AC9AC2B58FB8100993D61;
 			packageReferences = (
-				0C7AC9F32B5903BA00993D61 /* XCLocalSwiftPackageReference "../bv-streamingest" */,
+				0C0C0B852B6CC24A0058477B /* XCLocalSwiftPackageReference "../bv-streamingest" */,
 			);
 			productRefGroup = 0C7AC9B62B58FB8100993D61 /* Products */;
 			projectDirPath = "";
@@ -431,14 +431,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		0C7AC9F32B5903BA00993D61 /* XCLocalSwiftPackageReference "../bv-streamingest" */ = {
+		0C0C0B852B6CC24A0058477B /* XCLocalSwiftPackageReference "../bv-streamingest" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../bv-streamingest";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0C7AC9F42B5903BA00993D61 /* bv-streamingest */ = {
+		0C0C0B862B6CC24A0058477B /* bv-streamingest */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "bv-streamingest";
 		};

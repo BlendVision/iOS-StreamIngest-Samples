@@ -2756,56 +2756,56 @@
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 351,
+      "offset": 353,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "Array",
-      "offset": 548,
+      "offset": 550,
       "length": 10,
       "value": "[0.0, 0.0]"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "BooleanLiteral",
-      "offset": 594,
+      "offset": 596,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 656,
+      "offset": 658,
       "length": 4,
       "value": "1280"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 670,
+      "offset": 672,
       "length": 3,
       "value": "720"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 699,
+      "offset": 701,
       "length": 4,
       "value": "1600"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 706,
+      "offset": 708,
       "length": 4,
       "value": "1000"
     },
     {
       "filePath": "\/Users\/jenkinsslave\/builds\/k4GcNMyz\/0\/playback\/ios-bv-streamingest\/BVStreamIngest\/Source\/VideoSetting.swift",
       "kind": "IntegerLiteral",
-      "offset": 737,
+      "offset": 739,
       "length": 2,
       "value": "30"
     },

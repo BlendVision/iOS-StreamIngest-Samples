@@ -22,6 +22,14 @@ class IngestViewController: UIViewController {
     
     var previewView: StreamRenderView!
     
+    var infoLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .darkGray.withAlphaComponent(0.7)
+        return label
+    }()
+    
     let controlView: ControlView = {
         let view = ControlView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -75,6 +83,14 @@ class IngestViewController: UIViewController {
             controlView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             controlView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
+        
+        view.addSubview(infoLabel)
+        NSLayoutConstraint.activate([
+            infoLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            infoLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            infoLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -44.0),
+            infoLabel.heightAnchor.constraint(equalToConstant: 88.0)
+        ])
 
         // Do any additional setup after loading the view.
         NotificationCenter.default.addObserver(
@@ -99,6 +115,7 @@ class IngestViewController: UIViewController {
         }
         
         previewView.attachStream(stream)
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -109,6 +126,8 @@ class IngestViewController: UIViewController {
         stream.close()
         stream.attachCamera(nil, channel: 0)
         stream.attachAudio(nil)
+        
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     @objc
@@ -170,7 +189,9 @@ extension IngestViewController {
                                       change: [NSKeyValueChangeKey: Any]?,
                                       context: UnsafeMutableRawPointer?) {
         if Thread.isMainThread {
-            debugPrint("stream.currentFPS=\(stream.currentFPS) info=\(stream.info)")
+            let fps = stream.currentFPS
+            let bps = stream.info?.currentBytesPerSecond ?? 0
+            infoLabel.text = "FPS: \(fps)\nBytes Per Seconds: \(bps)"
         }
     }
 }
