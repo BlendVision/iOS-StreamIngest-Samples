@@ -1,0 +1,11 @@
+framework module BVStreamIngest {
+  umbrella header "BVStreamIngest.h"
+  export *
+
+  module * { export * }
+}
+
+module BVStreamIngest.Swift {
+  header "BVStreamIngest-Swift.h"
+  requires objc
+}
