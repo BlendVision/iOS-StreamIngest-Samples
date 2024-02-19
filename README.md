@@ -20,6 +20,16 @@ Please contains Info.plist.
 * NSMicrophoneUsageDescription
 * NSCameraUsageDescription
 
+## Installation
+### Using Swift Package Manager
+[Swift Package Manager](https://www.swift.org/documentation/package-manager/) is a tool for managing the distribution of Swift frameworks. It integrates with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+#### Using Xcode
+To integrate using Xcode 14, open your Project file and specify it in `Project > Package Dependencies` using the following URL:
+```swift
+https://github.com/BlendVision/iOS-StreamIngest-SDK.git
+```
+
 ## Prerequisites
 Make sure you setup and activate your AVAudioSession iOS.
 ```swift
