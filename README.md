@@ -1,4 +1,4 @@
-# BlendVision Stream Ingest
+# BlendVision Stream Ingest iOS Samples
 Stream From Your App
 To set up a streaming source and transmit it to BlendVision's live streaming service via a RTMP link from your own applications.
 
