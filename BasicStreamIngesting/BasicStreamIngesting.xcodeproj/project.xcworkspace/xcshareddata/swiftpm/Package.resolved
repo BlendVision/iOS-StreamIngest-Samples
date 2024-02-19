@@ -1,9 +1,9 @@
 {
   "pins" : [
     {
-      "identity" : "bv-streamingest",
+      "identity" : "ios-streamingest-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/BlendVision/bv-streamingest",
+      "location" : "https://github.com/BlendVision/iOS-StreamIngest-SDK",
       "state" : {
         "revision" : "93ef85fc1dcfa84f75a7a05e019ccb6f6091baf2",
         "version" : "1.0.0"

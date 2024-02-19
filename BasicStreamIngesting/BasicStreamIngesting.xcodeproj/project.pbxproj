@@ -12,7 +12,6 @@
 		0C577D032B6CD2F9009CE5DE /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C577D022B6CD2F9009CE5DE /* bv-streamingest */; };
 		0C577D092B6CD798009CE5DE /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C577D082B6CD798009CE5DE /* bv-streamingest */; };
 		0C577D0F2B6CD91F009CE5DE /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C577D0E2B6CD91F009CE5DE /* bv-streamingest */; };
-		0C577D152B6CDC0D009CE5DE /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C577D142B6CDC0D009CE5DE /* bv-streamingest */; };
 		0C577D162B6CDC89009CE5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9B82B58FB8100993D61 /* AppDelegate.swift */; };
 		0C577D172B6CDC89009CE5DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9BA2B58FB8100993D61 /* SceneDelegate.swift */; };
 		0C577D182B6CDC89009CE5DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9BC2B58FB8100993D61 /* ViewController.swift */; };
@@ -21,6 +20,7 @@
 		0C7AC9F92B5905DC00993D61 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9F82B5905DC00993D61 /* ControlView.swift */; };
 		0C7AC9FC2B5905FE00993D61 /* IngestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9FA2B5905FE00993D61 /* IngestViewController.swift */; };
 		0C7AC9FD2B5905FE00993D61 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AC9FB2B5905FE00993D61 /* SettingsViewController.swift */; };
+		0C9351F12B8330D200461616 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C9351F02B8330D200461616 /* bv-streamingest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 				0C577D002B6CD28D009CE5DE /* bv-streamingest in Frameworks */,
 				0C577D032B6CD2F9009CE5DE /* bv-streamingest in Frameworks */,
 				0C577D092B6CD798009CE5DE /* bv-streamingest in Frameworks */,
-				0C577D152B6CDC0D009CE5DE /* bv-streamingest in Frameworks */,
+				0C9351F12B8330D200461616 /* bv-streamingest in Frameworks */,
 				0C0C0B872B6CC24A0058477B /* bv-streamingest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,7 +111,7 @@
 				0C577D022B6CD2F9009CE5DE /* bv-streamingest */,
 				0C577D082B6CD798009CE5DE /* bv-streamingest */,
 				0C577D0E2B6CD91F009CE5DE /* bv-streamingest */,
-				0C577D142B6CDC0D009CE5DE /* bv-streamingest */,
+				0C9351F02B8330D200461616 /* bv-streamingest */,
 			);
 			productName = BasicStreamIngesting;
 			productReference = 0C7AC9D92B5902ED00993D61 /* BasicStreamIngesting.app */;
@@ -142,7 +142,7 @@
 			);
 			mainGroup = 0C7AC9AC2B58FB8100993D61;
 			packageReferences = (
-				0C577D132B6CDC0D009CE5DE /* XCRemoteSwiftPackageReference "bv-streamingest" */,
+				0C9351EF2B8330D200461616 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */,
 			);
 			productRefGroup = 0C7AC9B62B58FB8100993D61 /* Products */;
 			projectDirPath = "";
@@ -404,9 +404,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0C577D132B6CDC0D009CE5DE /* XCRemoteSwiftPackageReference "bv-streamingest" */ = {
+		0C9351EF2B8330D200461616 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BlendVision/bv-streamingest";
+			repositoryURL = "https://github.com/BlendVision/iOS-StreamIngest-SDK";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -435,9 +435,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = "bv-streamingest";
 		};
-		0C577D142B6CDC0D009CE5DE /* bv-streamingest */ = {
+		0C9351F02B8330D200461616 /* bv-streamingest */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0C577D132B6CDC0D009CE5DE /* XCRemoteSwiftPackageReference "bv-streamingest" */;
+			package = 0C9351EF2B8330D200461616 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */;
 			productName = "bv-streamingest";
 		};
 /* End XCSwiftPackageProductDependency section */
