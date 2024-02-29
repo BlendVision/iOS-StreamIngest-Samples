@@ -101,3 +101,17 @@ let quality = StreamIngestQualityMedium()
 stream.videoSize = quality.videoSize
 stream.videoBitrate = quality.videoBitRate
 ```
+
+### BeautyFilter Settings
+```swift
+// The skinSmooth object is created by BeautyFilter
+var fitler = BeautyFilter.create(.skinSmooth) as? SkinSmooth
+// Adjust intensity to skinSmooth
+fitler.intensity = 50
+
+// Register filter
+stream.registerFilter([fitler])
+
+// Unregister filter
+stream.unregisterFilter([fitler])
+```
