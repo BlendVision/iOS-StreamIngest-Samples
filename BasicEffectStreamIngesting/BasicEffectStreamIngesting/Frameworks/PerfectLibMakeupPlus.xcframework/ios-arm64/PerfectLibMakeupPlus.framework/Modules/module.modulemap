@@ -1,0 +1,6 @@
+framework module PerfectLibMakeupPlus {
+  umbrella header "PerfectLibMakeupPlus.h"
+  export *
+
+  module * { export * }
+}
