@@ -1,0 +1,6 @@
+framework module PerfectLibHandlerCore {
+  umbrella header "PerfectLibHandlerCore.h"
+  export *
+
+  module * { export * }
+}

@@ -7,6 +7,14 @@ Examples project are available for iOS with UIKit
 - [x] Camera and microphone publish.
 
 ## Requirements
+To run this example, a valid license configuration needs to be set. Please inform our contact window for assistance.
+
+### Dependencies
+- PerfectLibCore.xcframework
+- PerfectLibFaceTrackingPlus.xcframework
+- PerfectLibHandlerCore.xcframework
+- PerfectLibMakeupPlus.xcframework
+- PerfectLibProductHandler.xcframework
 
 ### Development
 |Version|Xcode|Swift|
