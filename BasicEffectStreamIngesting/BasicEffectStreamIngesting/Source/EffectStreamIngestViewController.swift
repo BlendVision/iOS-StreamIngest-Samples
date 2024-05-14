@@ -24,7 +24,7 @@ class EffectStreamIngestViewController: UIViewController {
     
     lazy var cameraPreviewView: UIView = {
         let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.bounds = self.getFrameBy(aspectRatio: 16.0/9.0)
         return view
     }()
     
@@ -97,12 +97,6 @@ class EffectStreamIngestViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.addSubview(cameraPreviewView)
-        NSLayoutConstraint.activate([
-            cameraPreviewView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            cameraPreviewView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            cameraPreviewView.topAnchor.constraint(equalTo: view.topAnchor),
-            cameraPreviewView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
         
         view.addSubview(controlView)
         NSLayoutConstraint.activate([
@@ -208,6 +202,7 @@ class EffectStreamIngestViewController: UIViewController {
         requestCameraAuthentication { [weak self] authorized in
             if authorized {
                 self?.effectStreamIngest?.createCameraView(self!.cameraPreviewView)
+                self?.correctView()
             }
             else {
                 self?.showCameraAccessDenied()
@@ -249,6 +244,20 @@ class EffectStreamIngestViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    private func getFrameBy(aspectRatio ratio:CGFloat) -> CGRect {
+        let screenW = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        let screenH = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        var w = screenW
+        var h = w * ratio
+        
+        if h > screenH {
+            h = screenH
+            w = h / ratio
+        }
+        
+        return CGRect(x: 0, y: 0, width: w, height: h)
     }
     
     @objc

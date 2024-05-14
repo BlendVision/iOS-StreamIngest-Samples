@@ -43,6 +43,7 @@ typedef NS_ENUM(NSUInteger, PFEffect) {
     PFEffectTeethWhitening,
     PFEffectBronzer,
     PFEffectConcealer,
+    PFEffectNecklace,
     PFEffectCount
 };
 #endif /* PFEffect_h */

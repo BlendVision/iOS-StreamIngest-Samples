@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		0C2BCF582BB693F20086C4B3 /* PerfectLibHandlerCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2BCF522BB693F20086C4B3 /* PerfectLibHandlerCore.xcframework */; };
 		0C2BCF592BB693F20086C4B3 /* PerfectLibMakeupPlus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2BCF532BB693F20086C4B3 /* PerfectLibMakeupPlus.xcframework */; };
 		0C2BCF5A2BB693F20086C4B3 /* PerfectLibProductHandler.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2BCF542BB693F20086C4B3 /* PerfectLibProductHandler.xcframework */; };
-		0C2BCF5D2BB698B00086C4B3 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C2BCF5C2BB698B00086C4B3 /* bv-streamingest */; };
 		0C49DF412BB66B6D00381053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF402BB66B6D00381053 /* AppDelegate.swift */; };
 		0C49DF432BB66B6D00381053 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF422BB66B6D00381053 /* SceneDelegate.swift */; };
 		0C49DF452BB66B6D00381053 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF442BB66B6D00381053 /* ViewController.swift */; };
@@ -26,10 +25,8 @@
 		0C49DF5E2BB66F1500381053 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF592BB66F1500381053 /* Preference.swift */; };
 		0C49DF5F2BB66F1500381053 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF5A2BB66F1500381053 /* SettingsViewController.swift */; };
 		0C49DF612BB6707200381053 /* EffectStreamIngestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF602BB6707200381053 /* EffectStreamIngestViewController.swift */; };
-		0C49DF652BB6731B00381053 /* YMK_Davinci_20200512_fp16.mnn in Resources */ = {isa = PBXBuildFile; fileRef = 0C49DF622BB6731B00381053 /* YMK_Davinci_20200512_fp16.mnn */; };
-		0C49DF662BB6731B00381053 /* YMK_Venus_20210709_fp16_alignmodel.mnn in Resources */ = {isa = PBXBuildFile; fileRef = 0C49DF632BB6731B00381053 /* YMK_Venus_20210709_fp16_alignmodel.mnn */; };
-		0C49DF682BB6733A00381053 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C49DF672BB6733A00381053 /* config.json */; };
 		0C49DF6B2BB692CA00381053 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C49DF6A2BB692CA00381053 /* bv-streamingest */; };
+		0C8EB52C2BF1E95E00D1EBCB /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C8EB52B2BF1E95E00D1EBCB /* bv-streamingest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +48,6 @@
 		0C49DF592BB66F1500381053 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		0C49DF5A2BB66F1500381053 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C49DF602BB6707200381053 /* EffectStreamIngestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectStreamIngestViewController.swift; sourceTree = "<group>"; };
-		0C49DF622BB6731B00381053 /* YMK_Davinci_20200512_fp16.mnn */ = {isa = PBXFileReference; lastKnownFileType = file; path = YMK_Davinci_20200512_fp16.mnn; sourceTree = "<group>"; };
-		0C49DF632BB6731B00381053 /* YMK_Venus_20210709_fp16_alignmodel.mnn */ = {isa = PBXFileReference; lastKnownFileType = file; path = YMK_Venus_20210709_fp16_alignmodel.mnn; sourceTree = "<group>"; };
-		0C49DF672BB6733A00381053 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = config.json; path = BasicEffectStreamIngesting/config.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +59,7 @@
 				0C2BCF4F2BB693490086C4B3 /* bv-streamingest in Frameworks */,
 				0C2BCF5A2BB693F20086C4B3 /* PerfectLibProductHandler.xcframework in Frameworks */,
 				0C2BCF572BB693F20086C4B3 /* PerfectLibFaceTrackingPlus.xcframework in Frameworks */,
-				0C2BCF5D2BB698B00086C4B3 /* bv-streamingest in Frameworks */,
+				0C8EB52C2BF1E95E00D1EBCB /* bv-streamingest in Frameworks */,
 				0C2BCF562BB693F20086C4B3 /* PerfectLibCore.xcframework in Frameworks */,
 				0C49DF562BB66DFF00381053 /* bv-streamingest in Frameworks */,
 				0C2BCF592BB693F20086C4B3 /* PerfectLibMakeupPlus.xcframework in Frameworks */,
@@ -93,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				0C2BCF552BB693F20086C4B3 /* Frameworks */,
-				0C49DF672BB6733A00381053 /* config.json */,
-				0C49DF642BB6731B00381053 /* model */,
 				0C49DF3F2BB66B6D00381053 /* BasicEffectStreamIngesting */,
 				0C49DF3E2BB66B6D00381053 /* Products */,
 			);
@@ -135,16 +127,6 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		0C49DF642BB6731B00381053 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				0C49DF622BB6731B00381053 /* YMK_Davinci_20200512_fp16.mnn */,
-				0C49DF632BB6731B00381053 /* YMK_Venus_20210709_fp16_alignmodel.mnn */,
-			);
-			name = model;
-			path = BasicEffectStreamIngesting/model;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,7 +147,7 @@
 				0C49DF552BB66DFF00381053 /* bv-streamingest */,
 				0C49DF6A2BB692CA00381053 /* bv-streamingest */,
 				0C2BCF4E2BB693490086C4B3 /* bv-streamingest */,
-				0C2BCF5C2BB698B00086C4B3 /* bv-streamingest */,
+				0C8EB52B2BF1E95E00D1EBCB /* bv-streamingest */,
 			);
 			productName = BasicEffectStreamIngesting;
 			productReference = 0C49DF3D2BB66B6D00381053 /* BasicEffectStreamIngesting.app */;
@@ -196,7 +178,7 @@
 			);
 			mainGroup = 0C49DF342BB66B6D00381053;
 			packageReferences = (
-				0C2BCF5B2BB698B00086C4B3 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */,
+				0C8EB52A2BF1E95E00D1EBCB /* XCLocalSwiftPackageReference "../../iOS-StreamIngest-SDK" */,
 			);
 			productRefGroup = 0C49DF3E2BB66B6D00381053 /* Products */;
 			projectDirPath = "";
@@ -212,12 +194,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C49DF662BB6731B00381053 /* YMK_Venus_20210709_fp16_alignmodel.mnn in Resources */,
 				0C49DF4A2BB66B6F00381053 /* Assets.xcassets in Resources */,
-				0C49DF652BB6731B00381053 /* YMK_Davinci_20200512_fp16.mnn in Resources */,
 				0C49DF4D2BB66B6F00381053 /* Base in Resources */,
 				0C49DF482BB66B6D00381053 /* Base in Resources */,
-				0C49DF682BB6733A00381053 /* config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +387,7 @@
 					"-framework",
 					CoreMotion,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KKS.BasicEffectStreamIngesting;
+				PRODUCT_BUNDLE_IDENTIFIER = KKS.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -444,7 +423,7 @@
 					"-framework",
 					CoreMotion,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KKS.BasicEffectStreamIngesting;
+				PRODUCT_BUNDLE_IDENTIFIER = KKS.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -475,25 +454,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		0C2BCF5B2BB698B00086C4B3 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BlendVision/iOS-StreamIngest-SDK";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		0C8EB52A2BF1E95E00D1EBCB /* XCLocalSwiftPackageReference "../../iOS-StreamIngest-SDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../iOS-StreamIngest-SDK";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		0C2BCF4E2BB693490086C4B3 /* bv-streamingest */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "bv-streamingest";
-		};
-		0C2BCF5C2BB698B00086C4B3 /* bv-streamingest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0C2BCF5B2BB698B00086C4B3 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */;
 			productName = "bv-streamingest";
 		};
 		0C49DF552BB66DFF00381053 /* bv-streamingest */ = {
@@ -501,6 +471,10 @@
 			productName = "bv-streamingest";
 		};
 		0C49DF6A2BB692CA00381053 /* bv-streamingest */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "bv-streamingest";
+		};
+		0C8EB52B2BF1E95E00D1EBCB /* bv-streamingest */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "bv-streamingest";
 		};

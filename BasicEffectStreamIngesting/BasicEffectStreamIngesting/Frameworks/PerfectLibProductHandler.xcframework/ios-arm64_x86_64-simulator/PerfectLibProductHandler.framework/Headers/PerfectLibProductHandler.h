@@ -22,6 +22,7 @@
 #import <PerfectLibProductHandler/PFRingVtoApplier.h>
 #import <PerfectLibProductHandler/PFWatchVtoApplier.h>
 #import <PerfectLibProductHandler/PFBraceletVtoApplier.h>
+#import <PerfectLibProductHandler/PFAccessoryVtoApplier.h>
 
 #import <PerfectLibProductHandler/EffectId.h>
 #import <PerfectLibProductHandler/ProductId.h>
@@ -33,4 +34,4 @@
 
 #import <PerfectLibProductHandler/PFReshapeEffectId.h>
 
-#define PerfectLibProductHandlerVer   @"5.7.1.86021521"
+#define PerfectLibProductHandlerVer   @"5.9.0.88300639"

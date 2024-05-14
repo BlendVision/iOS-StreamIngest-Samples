@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/PFFaceData.h</key>
 		<data>
-		ZeNC41wNezOWDEc3cCy0ZgJlrCw=
+		F90raMPbAdbqZo92uow5iBCd9Ck=
 		</data>
 		<key>Headers/PFFrameInfo.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/PFMakeupCam.h</key>
 		<data>
-		KDxa8xWzWzHayABxmrD6sSGymTk=
+		Obe9k1IjY1MAoSxHho4CSe7KLHA=
 		</data>
 		<key>Headers/PFMakeupPlugin.h</key>
 		<data>
@@ -26,15 +26,15 @@
 		</data>
 		<key>Headers/PFPhotoMakeup.h</key>
 		<data>
-		BN0gyMtx/eBK6ZEH4W+W/4KbJ3E=
+		F3gaNwPBTh7Cy5G0GQ2hGPyFGvg=
 		</data>
 		<key>Headers/PerfectLibMakeupPlus.h</key>
 		<data>
-		95mOjxrZ6baceEjUSVcKgvqf2Wc=
+		w+4QXkLXryJHg9OUD7gd0PwvPck=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7jjWTUS9hvmDymEOInYQ3jlmqu8=
+		vOGaLceBKfpUSJ2vczqh6x52NL8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,11 +58,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZeNC41wNezOWDEc3cCy0ZgJlrCw=
+			F90raMPbAdbqZo92uow5iBCd9Ck=
 			</data>
 			<key>hash2</key>
 			<data>
-			dGlk89xdmU1awsNjWbE1eOSxpPzUO2jiVQbhpwKmrqg=
+			tOyKddoCCzsftAqJx5fFnHNo+B1VMvVTVkgQLR5q4dQ=
 			</data>
 		</dict>
 		<key>Headers/PFFrameInfo.h</key>
@@ -80,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KDxa8xWzWzHayABxmrD6sSGymTk=
+			Obe9k1IjY1MAoSxHho4CSe7KLHA=
 			</data>
 			<key>hash2</key>
 			<data>
-			T91rc15o9qHEiF8eGShoHwRopXzyXjlpuR5U81SkUq8=
+			LMXbGHBvntHs78C3kWI5PuILd1Og81iOTlBasKlzpUo=
 			</data>
 		</dict>
 		<key>Headers/PFMakeupPlugin.h</key>
@@ -102,22 +102,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BN0gyMtx/eBK6ZEH4W+W/4KbJ3E=
+			F3gaNwPBTh7Cy5G0GQ2hGPyFGvg=
 			</data>
 			<key>hash2</key>
 			<data>
-			lySuCmqrcrmznfNvSFoJTSDugS7h/+CuuIM4NZozIFM=
+			nppmZvxzTtKiAhOewMR9k8BOoZBDWX9B2+1Rt+LCEbo=
 			</data>
 		</dict>
 		<key>Headers/PerfectLibMakeupPlus.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			95mOjxrZ6baceEjUSVcKgvqf2Wc=
+			w+4QXkLXryJHg9OUD7gd0PwvPck=
 			</data>
 			<key>hash2</key>
 			<data>
-			a4emNM67V3OAq+CbkKwWWD27rRH5Y3ZtpH1iOaXtrNA=
+			tDM1b7l+9szUFtiSZyFJ8hOJ+8VVxA8CM+T0rW1GyHA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

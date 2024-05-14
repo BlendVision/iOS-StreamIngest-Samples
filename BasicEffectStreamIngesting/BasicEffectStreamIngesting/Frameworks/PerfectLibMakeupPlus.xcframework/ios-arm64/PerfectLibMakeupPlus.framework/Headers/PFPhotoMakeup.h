@@ -37,6 +37,14 @@ To apply virtual makeup, face locations need to be identified. Use `-[PFPhotoMak
 + (void)create:(UIImage *)image enableWhitening:(BOOL)enableWhitening completion:(void (^)(PFPhotoMakeup * _Nullable photoMakeup, NSError * _Nullable error))completion;
 
 /**
+ Create a `PFPhotoMakeup` instance.
+ @param photoAccessoryAR combined photo accessory process into PFPhotoMakeup
+ @param enableWhitening Enable skin smooth with whitening effect, by turning the function on, photo processing with skin smooth effect will have same result with live mode. default value is false.
+ @param completion A completion called when the init operation completes.
+*/
++ (void)createWithPhotoAccessoryAR:(id)photoAccessoryAR enableWhitening:(BOOL)enableWhitening completion:(void (^)(PFPhotoMakeup * _Nullable photoMakeup, NSError * _Nullable error))completion;
+
+/**
  Identify face locations on a given image.
  
  @param successBlock A block called when face detection completes. The parameter 'faceDataArray' is an array of `PFFaceData` for faces on the image.
@@ -64,6 +72,11 @@ To apply virtual makeup, face locations need to be identified. Use `-[PFPhotoMak
  @note turn off this value will reset the currentFaceIndex to 0 automatically.
  */
 - (void)enable4SplitScreen:(BOOL)isEnabled completion:(void (^)(UIImage *image))completion;
+
+/**
+ Set enable/disable the skin smooth on face only. If the property is enabled, the detected face will be whitened. The skin smooth on face only is disabled by default.
+ */
+- (void)enableSkinSmoothFaceOnly:(BOOL)enableSkinSmoothFaceOnly completion:(void (^)(UIImage *image))completion;
 
 /**
  The index of current face for the makeup effect applying. 0: top left. 1: top right. 2: bottom left. 3: bottom right.

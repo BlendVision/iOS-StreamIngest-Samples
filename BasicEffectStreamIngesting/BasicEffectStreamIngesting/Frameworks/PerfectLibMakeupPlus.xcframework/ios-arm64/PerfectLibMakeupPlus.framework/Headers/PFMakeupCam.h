@@ -142,7 +142,7 @@ NS_SWIFT_NAME(MakeupCam)
 /**
  The class captures the camera frames and applies virtual makeup.
  
- Initialize a `PFMakeupCam` object with `-[PFMakeupCam initWithCameraView:delegate:]`. This function initializes the makeup camera and puts a virtual makeup view on a given view.
+ Create a `PFMakeupCam` object with `+[PFMakeupCam createWithCameraView:completion:]`. This function creates the makeup camera and puts a virtual makeup view on a given view. The `PFMakeupCam` object is returned in the completion block.
  */
 @interface PFMakeupCam : NSObject
 @property (nonatomic, nullable, readonly) NSArray<NSNumber*>* availableFunctionalities;
@@ -151,27 +151,56 @@ NS_SWIFT_NAME(MakeupCam)
  Initialize a `PFMakeupCam` object.
  
  @note This initializer init the `PFMakeupCam` object without AVCaptureDevice created. The video frame will be send to the object by `-[PFMakeupCam sendFrame:]`.
- 
  @param view The superview for the rendering view of the `PFMakeupCam` object
- 
  @return `PFMakeupCam` instance
+ @warning Deprecated - use `+[PFMakeupCam createWithCameraView:completion:]` instead.
  */
-- (instancetype)initWithCameraView:(UIView *)view;
+
+- (instancetype)initWithCameraView:(UIView *)view __attribute__ ((deprecated));
 /**
  Initialize a `PFMakeupCam` object.
  
  @note This initializer init the `PFMakeupCam` object without AVCaptureDevice created. The video frame will be send to the object by `-[PFMakeupCam sendFrame:]`.
- 
  @param view The superview for the rendering view of the `PFMakeupCam` object
  @param delegate An object implements `PFMakeupCamDelegate` protocol for receiving `PFMakeupCam` object status change
- 
  @return `PFMakeupCam` instance
+ @warning Deprecated - use `+[PFMakeupCam createWithCameraView:delegate:completion:]` or `+[PFMakeupCam createWithDelegate::completion:]` instead.
  */
 - (instancetype)initWithCameraView:(UIView *)view
-                          delegate:(id<PFMakeupCamDelegate> _Nullable)delegate NS_DESIGNATED_INITIALIZER;
+                          delegate:(id<PFMakeupCamDelegate> _Nullable)delegate NS_DESIGNATED_INITIALIZER __attribute__ ((deprecated));
 
 - (instancetype)initWithDelegate:(id<PFMakeupCamDelegate>)delegate
-               completionHandler:(void (^)(PFFrameBufferRenderer *renderer))completionHandler NS_DESIGNATED_INITIALIZER;
+               completionHandler:(void (^)(PFFrameBufferRenderer *renderer))completionHandler NS_DESIGNATED_INITIALIZER __attribute__ ((deprecated));
+
+/**
+ Create a `PFMakeupCam` instance.
+ 
+ @note This initializer init the `PFMakeupCam` object without AVCaptureDevice created. The video frame will be send to the object by `-[PFMakeupCam sendFrame:]`.
+ @param view The superview for the rendering view of the `PFMakeupCam` object
+ @param completion A completion called when the init operation completes.
+*/
++ (void)createWithCameraView:(UIView *)view 
+                  completion:(void (^)(PFMakeupCam * _Nullable makeupCam, NSError * _Nullable error))completion;
+
+
+/**
+ Create a `PFMakeupCam` instance.
+ 
+ @note This initializer init the `PFMakeupCam` object without AVCaptureDevice created. The video frame will be send to the object by `-[PFMakeupCam sendFrame:]`.
+ @param view The superview for the rendering view of the `PFMakeupCam` object
+ @param delegate An object implements `PFMakeupCamDelegate` protocol for receiving `PFMakeupCam` object status change
+ @param completion A completion called when the init operation completes.
+*/
++ (void)createWithCameraView:(UIView *)view
+                    delegate:(id<PFMakeupCamDelegate> _Nullable)delegate
+                  completion:(void (^)(PFMakeupCam * _Nullable makeupCam, NSError * _Nullable error))completion;
+
++ (void)createWithAccessoryCam:(id)accessoryCam
+                      delegate:(id<PFMakeupCamDelegate> _Nullable)delegate
+                    completion:(void (^)(PFMakeupCam * _Nullable makeupCam, NSError * _Nullable error))completion;
+
++ (void)createWithDelegate:(id<PFMakeupCamDelegate> _Nullable)delegate
+                completion:(nonnull void (^)(PFMakeupCam * _Nullable makeupCam, PFFrameBufferRenderer * _Nullable renderer, NSError * _Nullable error))completion;
 
 /**
  Get the loading status of the `PFMakeupCam` object.
@@ -199,6 +228,11 @@ NS_SWIFT_NAME(MakeupCam)
  @note turn off this value will reset the currentFaceIndex to 0 automatically.
  */
 @property (nonatomic) BOOL enable4SplitScreen;
+
+/**
+ Set enable/disable the skin smooth on face only. If the property is enabled, the detected face will be whitened. The skin smooth on face only is disabled by default.
+ */
+@property (nonatomic) BOOL enableSkinSmoothFaceOnly;
 
 /**
  The index of current face for the makeup effect applying. 0: top left. 1: top right. 2: bottom left. 3: bottom right.
@@ -301,16 +335,15 @@ NS_SWIFT_NAME(MakeupCam)
 - (void)setPupilDistance:(CGFloat)pupilDistance;
 
 #pragma mark -
+/**
+ Unavailable. Use `+[PFMakeupCam createWithCameraView:delegate:complete:]` to create`PFMakeupCam` object.
+ */
+- (id)init __attribute__((unavailable("Use +create")));
 
 /**
- Unavailable. Use `-initWithCameraView` for `PFMakeupCam` object initializing.
+ Unavailable. Use `+[PFMakeupCam createWithCameraView:delegate:complete:]` to create `PFMakeupCam` object.
  */
-- (instancetype)init NS_UNAVAILABLE;
-
-/**
- Unavailable. Use `-initWithCameraView` for `PFMakeupCam` object initializing.
- */
-- (instancetype)new NS_UNAVAILABLE;
++ (instancetype)new __attribute__((unavailable("Use +create")));
 
 @end
 

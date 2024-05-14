@@ -9,4 +9,4 @@
 #import <PerfectLibCore/PFFrameBufferRenderer.h>
 #import <PerfectLibCore/PFEffect.h>
 
-#define PerfectLibCoreVer   @"5.7.1.86021521"
+#define PerfectLibCoreVer   @"5.9.0.88300639"

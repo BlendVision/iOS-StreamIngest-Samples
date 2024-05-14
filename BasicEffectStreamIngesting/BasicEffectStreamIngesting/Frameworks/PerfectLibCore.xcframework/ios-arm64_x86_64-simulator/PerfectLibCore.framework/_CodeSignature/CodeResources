@@ -12,13 +12,17 @@
 		<data>
 		AhvoT9hyW6RtL9UYtvN/1P6JzPI=
 		</data>
+		<key>Headers/MakeupEffectNecklaceProfile.h</key>
+		<data>
+		cixn1xwVSxHRQaBtKrNf9SwP+bo=
+		</data>
 		<key>Headers/PFCommon.h</key>
 		<data>
-		ytrhpslzW0/b0Gk7b+UbBTfzueQ=
+		5N7mUevnxpqW/nRNCEE/F87gmbI=
 		</data>
 		<key>Headers/PFEffect.h</key>
 		<data>
-		qlWdgh2rcTzwH+Q1Wa3y4qn3jZ4=
+		NVUeH0cg3Mwl9zqgKkJ36h9zuQc=
 		</data>
 		<key>Headers/PFFrameBufferRenderer.h</key>
 		<data>
@@ -38,7 +42,7 @@
 		</data>
 		<key>Headers/PerfectLibCore.h</key>
 		<data>
-		eJA5i9rpMH+bVSXGb7LZmQHDQjM=
+		G+PIPXWrZzKArewxLJpodoaNO/s=
 		</data>
 		<key>Headers/PerfectLibErrorCode.h</key>
 		<data>
@@ -46,11 +50,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Wr4/swABw/JYsK1hKPyXFRAoAVk=
+		lYxIugPz4nzvoEieOhgpI2ROnBw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		KKpS1mMuOyRX95Ww/LmjrPWKHdw=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		eo1UrTHLP8tP0aeaY562Ilr0kNE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -77,26 +85,37 @@
 			GSPfWc6L7Z/5Qjwhk+hlHymritPJhj6hW2EPHK6wKOU=
 			</data>
 		</dict>
+		<key>Headers/MakeupEffectNecklaceProfile.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cixn1xwVSxHRQaBtKrNf9SwP+bo=
+			</data>
+			<key>hash2</key>
+			<data>
+			weNF2PTk2RYTjXwnzVDMxLQHAXIpnjhgbx1+F8bPq+Q=
+			</data>
+		</dict>
 		<key>Headers/PFCommon.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ytrhpslzW0/b0Gk7b+UbBTfzueQ=
+			5N7mUevnxpqW/nRNCEE/F87gmbI=
 			</data>
 			<key>hash2</key>
 			<data>
-			l2eW3rh//hQNd5l6u25HJ6ByD+67ro7S+x7kRDvxR3M=
+			uWkYt3ZiAQbuUqDuoa139fW8ZmLFKThO7+9hALkTv1M=
 			</data>
 		</dict>
 		<key>Headers/PFEffect.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qlWdgh2rcTzwH+Q1Wa3y4qn3jZ4=
+			NVUeH0cg3Mwl9zqgKkJ36h9zuQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			TkrUEPGsgpxb9OrOjLgaFtPPyDEFQ+FlhsjkFCYQzxM=
+			iH0hirvSWlvV7KunAT7UWm/4Rvlc2iTVLLUSgxQNSnQ=
 			</data>
 		</dict>
 		<key>Headers/PFFrameBufferRenderer.h</key>
@@ -147,11 +166,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eJA5i9rpMH+bVSXGb7LZmQHDQjM=
+			G+PIPXWrZzKArewxLJpodoaNO/s=
 			</data>
 			<key>hash2</key>
 			<data>
-			AyRURd8kSjoIVzkqF0VkVEoCsttzAPj45t0btCBemF0=
+			VYSTjfuS025GkGIyU+TqYbokQnBHCX7rOjLqJPUrzzw=
 			</data>
 		</dict>
 		<key>Headers/PerfectLibErrorCode.h</key>
@@ -174,6 +193,17 @@
 			<key>hash2</key>
 			<data>
 			f2Fo8azhQfZ+QNj9KP7OtJdspIr6bo8Cvatm2uoCoaU=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eo1UrTHLP8tP0aeaY562Ilr0kNE=
+			</data>
+			<key>hash2</key>
+			<data>
+			0dpU7MtgzvsQNV3PmhxY4mu+Gk0jRiWdsTOvqrSxsLg=
 			</data>
 		</dict>
 	</dict>
