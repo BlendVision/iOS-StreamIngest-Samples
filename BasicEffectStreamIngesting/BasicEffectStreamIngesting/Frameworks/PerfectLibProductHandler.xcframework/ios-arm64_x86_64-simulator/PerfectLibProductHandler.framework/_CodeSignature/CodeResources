@@ -24,6 +24,10 @@
 		<data>
 		7BQ5r8CQl2G+LZBG8CpTNyhDODs=
 		</data>
+		<key>Headers/PFAccessoryVtoApplier.h</key>
+		<data>
+		MfsaWIzkKUkQSmE//3t+rV68y8A=
+		</data>
 		<key>Headers/PFBraceletVtoApplier.h</key>
 		<data>
 		CDGS/l2CfvxNsc5EavT7WYEvU6Y=
@@ -70,7 +74,7 @@
 		</data>
 		<key>Headers/PerfectLibProductHandler.h</key>
 		<data>
-		PseD6Zh7WxmtaxUiQD+Zhenj28E=
+		c7CaOKYJPmgzpnDZW1IPCOl+XKY=
 		</data>
 		<key>Headers/ProductId.h</key>
 		<data>
@@ -90,7 +94,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		68EC5JUvo+9rLvjuBQiRJbt+Tw8=
+		JnyasgGwsgFvuCjIOlo2QUC7+GI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -152,6 +156,17 @@
 			<key>hash2</key>
 			<data>
 			GcSXIlEHtsrdENxOnL2UAzVUNIhpNDjh0sE/XBiS22s=
+			</data>
+		</dict>
+		<key>Headers/PFAccessoryVtoApplier.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MfsaWIzkKUkQSmE//3t+rV68y8A=
+			</data>
+			<key>hash2</key>
+			<data>
+			uh+5FSQkYRcFvZTDN5f5q5PFOKoGI6ULyANOs6qByFM=
 			</data>
 		</dict>
 		<key>Headers/PFBraceletVtoApplier.h</key>
@@ -279,11 +294,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PseD6Zh7WxmtaxUiQD+Zhenj28E=
+			c7CaOKYJPmgzpnDZW1IPCOl+XKY=
 			</data>
 			<key>hash2</key>
 			<data>
-			NcMuMuFvDUJeaME76Ej8vaBmfyQHdyG69MjAtDuW8Qw=
+			pGkDj61BG3rvyBEt9Guoppol4kHreuPN+WRX8rsAPYg=
 			</data>
 		</dict>
 		<key>Headers/ProductId.h</key>

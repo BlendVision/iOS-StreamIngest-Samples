@@ -35,11 +35,11 @@
 /**
  Unavailable. Use `PhotoMakeup:detectFace` to get instance.
  */
-- (id)init __attribute__((unavailable("Use `PhotoEditor:scanFace` to get instance")));
+- (id)init __attribute__((unavailable("Use `PhotoMakeup:detectFace` to get instance")));
 
 /**
  Unavailable. Use `PhotoMakeup:detectFace` to get instance.
  */
-+ (instancetype)new __attribute__((unavailable("Use `PhotoEditor:scanFace` to get instance")));
++ (instancetype)new __attribute__((unavailable("Use `PhotoMakeup:detectFace` to get instance")));
 
 @end

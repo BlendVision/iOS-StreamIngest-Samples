@@ -6,4 +6,4 @@
 #import <PerfectLibMakeupPlus/PFPhotoMakeup.h>
 #import <PerfectLibMakeupPlus/PFFaceAlignmentData.h>
 
-#define PerfectLibMakeupPlusVer   @"5.7.1.86021521"
+#define PerfectLibMakeupPlusVer   @"5.9.0.88300639"

@@ -38,6 +38,16 @@ To integrate using Xcode 14, open your Project file and specify it in `Project >
 https://github.com/BlendVision/iOS-StreamIngest-SDK.git
 ```
 
+### Add PerfectLib frameworks
+- PerfectLib frameworks are static frameworks. Put them into the "Frameworks,Libraries, and Embedded Content" section in your project APP target setting. Select "Do Not Embed" for all frameworks.
+![frameworks](Assets/frameworks.png)
+
+- Add the linker flags -ObjC -lc++ -framework CoreMotion
+![linker flags](Assets/linker_flags.png)
+
+- Project info setting
+The PerfectLib frameworks requires two permissions: Camera and Microphone. iOS requires the description of the permission usage in APP’s info.plist.
+
 ## Prerequisites
 Make sure you setup and activate your AVAudioSession iOS.
 ```swift

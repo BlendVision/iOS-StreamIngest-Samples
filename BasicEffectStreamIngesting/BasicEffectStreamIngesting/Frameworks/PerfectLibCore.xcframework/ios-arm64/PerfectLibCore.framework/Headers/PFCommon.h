@@ -44,6 +44,8 @@ typedef NS_ENUM (NSInteger, PFFunctionality) {
     PFFunctionalityHairStylist,
     /// The ability to apply tutorial function
     PFFunctionalityTutorial,
+    /// The ability to apply necklace function
+    PFFunctionalityNecklace,
 };
 
 /**

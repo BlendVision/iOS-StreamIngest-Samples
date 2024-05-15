@@ -1,6 +1,6 @@
 //
 //  IngestViewController.swift
-//  RTMPusherExample
+//  BVStreamIngest
 //
 //  Created by Tsung Cheng Lo on 2024/1/9.
 //
@@ -36,7 +36,7 @@ class IngestViewController: UIViewController {
         return view
     }()
     
-    private var currentPosition: AVCaptureDevice.Position = .front
+    private var currentPosition: AVCaptureDevice.Position = .back
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -209,7 +209,7 @@ extension IngestViewController: StreamIngestDelegate {
     func streamIngestDidFailToPublish(_ streamIngest: StreamIngest) {
         DispatchQueue.main.async {
             let controller = UIAlertController(title: "Oops",
-                                               message: "Faile to publish",
+                                               message: "Fail to publish",
                                                preferredStyle: .alert)
             
             let okButton = UIAlertAction(title: "OK", style: .destructive) { _ in
