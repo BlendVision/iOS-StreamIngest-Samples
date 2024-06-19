@@ -9,13 +9,6 @@ Examples project are available for iOS with UIKit
 ## Requirements
 To run this example, a valid license configuration needs to be set. Please inform our contact window for assistance.
 
-### Dependencies
-- PerfectLibCore.xcframework
-- PerfectLibFaceTrackingPlus.xcframework
-- PerfectLibHandlerCore.xcframework
-- PerfectLibMakeupPlus.xcframework
-- PerfectLibProductHandler.xcframework
-
 ### Development
 |Version|Xcode|Swift|
 |:----:|:----:|:----:|
@@ -37,10 +30,6 @@ To integrate using Xcode 14, open your Project file and specify it in `Project >
 ```swift
 https://github.com/BlendVision/iOS-StreamIngest-SDK.git
 ```
-
-### Add PerfectLib frameworks
-- PerfectLib frameworks are static frameworks. Put them into the "Frameworks,Libraries, and Embedded Content" section in your project APP target setting. Select "Do Not Embed" for all frameworks.
-![frameworks](Assets/frameworks.png)
 
 - Add the linker flags -ObjC -lc++ -framework CoreMotion
 ![linker flags](Assets/linker_flags.png)
