@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  BasicStreamIngesting
+//  Example
 //
-//  Created by Tsung Cheng Lo on 2024/1/18.
+//  Created by Tsung Cheng Lo on 2024/1/10.
 //
 
 import UIKit
@@ -10,9 +10,20 @@ import BVStreamIngest
 
 class ViewController: UIViewController {
     
-    let urlTextField: UITextField = {
+    let licenseTextField: UITextField = {
         let field = UITextField()
         field.tag = 0
+        field.translatesAutoresizingMaskIntoConstraints = false
+        field.text = Preference.shared.licenseKey
+        field.backgroundColor = .darkText
+        field.textColor = .white
+        field.clearButtonMode = .whileEditing
+        return field
+    }()
+    
+    let urlTextField: UITextField = {
+        let field = UITextField()
+        field.tag = 1
         field.translatesAutoresizingMaskIntoConstraints = false
         field.text = Preference.shared.uri
         field.backgroundColor = .darkText
@@ -23,7 +34,7 @@ class ViewController: UIViewController {
     
     let streamNameTextField: UITextField = {
         let field = UITextField()
-        field.tag = 1
+        field.tag = 2
         field.translatesAutoresizingMaskIntoConstraints = false
         field.text = Preference.shared.streamName
         field.backgroundColor = .darkText
@@ -63,11 +74,28 @@ class ViewController: UIViewController {
         
         view.backgroundColor = Preference.backgroundColor
         
+        licenseTextField.delegate = self
+        view.addSubview(licenseTextField)
+        NSLayoutConstraint.activate([
+            licenseTextField.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor
+            ),
+            licenseTextField.leadingAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16.0
+            ),
+            licenseTextField.trailingAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16.0
+            ),
+            licenseTextField.heightAnchor.constraint(
+                equalToConstant: 44.0
+            )
+        ])
+        
         urlTextField.delegate = self
         view.addSubview(urlTextField)
         NSLayoutConstraint.activate([
             urlTextField.topAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.topAnchor
+                equalTo: licenseTextField.bottomAnchor, constant: 8.0
             ),
             urlTextField.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16.0
@@ -111,10 +139,25 @@ class ViewController: UIViewController {
     
     @objc
     func on(goLive: UIButton) {
-        let liveController = IngestViewController()
-        let navController = UINavigationController(rootViewController: liveController)
-        navController.modalPresentationStyle = .fullScreen
-        present(navController, animated: true)
+        Task {
+            do {
+                guard let licenseKey = licenseTextField.text, licenseKey.count > 0 else {
+                    showAlert(with: -999, message: "License Key is empty")
+                    return
+                }
+                let config = StreamIngestConfig(key: licenseKey)
+                guard let streamIngest = try await createStreamIngest(with: config) else { return }
+                
+                let liveController = IngestViewController(streamIngest: streamIngest)
+                let navController = UINavigationController(rootViewController: liveController)
+                navController.modalPresentationStyle = .fullScreen
+                present(navController, animated: true)
+            } catch {
+                let errorCode = (error as NSError).code
+                let errorMessage = (error as NSError).domain
+                showAlert(with: errorCode, message: errorMessage)
+            }
+        }
     }
     
     @objc
@@ -126,10 +169,43 @@ class ViewController: UIViewController {
     
     @objc
     func on(effectGoLive: UIButton) {
-        let liveController = EffectStreamIngestViewController()
-        let navController = UINavigationController(rootViewController: liveController)
-        navController.modalPresentationStyle = .fullScreen
-        present(navController, animated: true)
+        Task {
+            do {
+                guard let licenseKey = licenseTextField.text, licenseKey.count > 0 else {
+                    showAlert(with: -999, message: "License Key is empty")
+                    return
+                }
+                let config = StreamIngestConfig(key: licenseKey)
+                guard let streamIngest = try await createStreamIngest(with: config) else { return }
+                
+                let liveController = EffectStreamIngestViewController(streamIngest: streamIngest)
+                let navController = UINavigationController(rootViewController: liveController)
+                navController.modalPresentationStyle = .fullScreen
+                present(navController, animated: true)
+            } catch {
+                let errorCode = (error as NSError).code
+                let errorMessage = (error as NSError).domain
+                showAlert(with: errorCode, message: errorMessage)
+            }
+        }
+    }
+    
+    func createStreamIngest(with config: StreamIngestConfig) async throws -> StreamIngest? {
+        let stream = try await StreamIngest.create(with: config)
+        let quality = Preference.shared.streamIngestQuality
+        stream?.videoSize = quality.videoSize
+        stream?.videoBitrate = quality.videoBitRate
+        stream?.audioBitrate = quality.audioBitRate
+        return stream
+    }
+    
+    func showAlert(with code: Int, message: String) {
+        let controller = UIAlertController(title: "Error",
+                                           message: "\(message) (\(code))",
+                                           preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        controller.addAction(action)
+        present(controller, animated: true)
     }
 }
 
@@ -137,6 +213,8 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.tag == 0 {
+            Preference.shared.licenseKey = textField.text!
+        } else if textField.tag == 1 {
             Preference.shared.uri = textField.text
         } else {
             Preference.shared.streamName = textField.text
