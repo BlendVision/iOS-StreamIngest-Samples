@@ -8,8 +8,7 @@ struct Preference {
     
     var streamName: String? = "0ea216396fcd429eab7dfc42ddfc23f4"
     
-    // LICwgI5FrfrSwRgL-hRrpwaB5ZdMz4v21QWNKCbOsTcR
-    var licenseKey: String = "LICwgI5FrfrSwRgL-hRrpwaB5ZdMz4v21QWNKCbOsTcR"
+    var licenseKey: String = "Your-License-Key"
     
     static let backgroundColor = UIColor(red: 22.0/255, green: 20.0/255.0, blue: 21.0/255.0, alpha: 1.0)
     
