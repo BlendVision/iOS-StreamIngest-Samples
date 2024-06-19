@@ -11,22 +11,9 @@ import BVStreamIngest
 
 class EffectStreamIngestViewController: UIViewController {
     
-    lazy var streamIngest: StreamIngest = {
-        let quality = Preference.shared.streamIngestQuality
-        let stream = StreamIngest()
-        stream.videoSize = quality.videoSize
-        stream.videoBitrate = quality.videoBitRate
-        stream.audioBitrate = quality.audioBitRate
-        return stream
-    }()
+    var streamIngest: StreamIngest
     
-    let authorizer = StreamIngestAuthorizer(debugMode: true)
-    
-    lazy var cameraPreviewView: UIView = {
-        let view = UIView()
-        view.bounds = self.getFrameBy(aspectRatio: 16.0/9.0)
-        return view
-    }()
+    var cameraPreviewView: CameraPreviewView?
     
     lazy var skinSmoothSlider: UISlider = {
         let slider = UISlider()
@@ -58,11 +45,20 @@ class EffectStreamIngestViewController: UIViewController {
     private var appActiveObserver: NSObjectProtocol? = nil
     
     private var appInactiveObserver: NSObjectProtocol? = nil
+    
+    init(streamIngest: StreamIngest) {
+        self.streamIngest = streamIngest
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        authorizer.requestAuthentication { error in
+        streamIngest.requestAuthentication { error in
             if let error {
                 debugPrint("Authority error = \(error)")
             } else {
@@ -96,8 +92,34 @@ class EffectStreamIngestViewController: UIViewController {
         ]
 
         // Do any additional setup after loading the view.
-        view.addSubview(cameraPreviewView)
-        
+        requestCameraAuthentication { [weak self] authorized in
+            if authorized {
+                guard let self = self else { return }
+                guard let previewView = effectStreamIngest?.createCameraView(
+                    frame: .zero,
+                    aspectRatio: 16.0 / 9.0
+                ) else { return }
+                
+                previewView.translatesAutoresizingMaskIntoConstraints = false
+                view.addSubview(previewView)
+                
+                NSLayoutConstraint.activate([
+                    previewView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+                    previewView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                    previewView.topAnchor.constraint(equalTo: view.topAnchor),
+                    previewView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                ])
+                
+                cameraPreviewView = previewView
+                setupViews()
+            }
+            else {
+                self?.showCameraAccessDenied()
+            }
+        }
+    }
+    
+    func setupViews() {
         view.addSubview(controlView)
         NSLayoutConstraint.activate([
             controlView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
@@ -138,7 +160,9 @@ class EffectStreamIngestViewController: UIViewController {
             try? effectStreamIngest?.attachAudio(device: audio)
         }
         
-        if let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition) {
+        if let camera = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                for: .video,
+                                                position: currentPosition) {
             try? effectStreamIngest?.attachCamera(device: camera)
             
             DispatchQueue.global(qos: .background).async { [weak self] in
@@ -147,7 +171,11 @@ class EffectStreamIngestViewController: UIViewController {
             }
         }
         
-        appActiveObserver = NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] (notification) in
+        appActiveObserver = NotificationCenter.default.addObserver(
+            forName: UIApplication.didBecomeActiveNotification,
+            object: nil,
+            queue: nil
+        ) { [weak self] (notification) in
             
             DispatchQueue.global(qos: .background).async { [weak self] in
                 guard let self = self else { return }
@@ -159,7 +187,11 @@ class EffectStreamIngestViewController: UIViewController {
             }
         }
         
-        appInactiveObserver = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { [weak self] (notification) in
+        appInactiveObserver = NotificationCenter.default.addObserver(
+            forName: UIApplication.didEnterBackgroundNotification,
+            object: nil,
+            queue: nil
+        ) { [weak self] (notification) in
             
             DispatchQueue.global(qos: .background).async { [weak self] in
                 guard let self = self else {
@@ -171,7 +203,6 @@ class EffectStreamIngestViewController: UIViewController {
                     self.streamIngest.stopPublish()
                 }
             }
-            
         }
         
         UIApplication.shared.isIdleTimerDisabled = true
@@ -199,20 +230,11 @@ class EffectStreamIngestViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        requestCameraAuthentication { [weak self] authorized in
-            if authorized {
-                self?.effectStreamIngest?.createCameraView(self!.cameraPreviewView)
-                self?.correctView()
-            }
-            else {
-                self?.showCameraAccessDenied()
-            }
-        }
-        return
+        cameraPreviewView?.adjustRenderView()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        correctView(to: size)
+        cameraPreviewView?.adjustRenderView(to: size)
     }
     
     func requestCameraAuthentication(_ completion: @escaping (_ authorized: Bool)->Void) {
@@ -244,20 +266,6 @@ class EffectStreamIngestViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
         }
-    }
-    
-    private func getFrameBy(aspectRatio ratio:CGFloat) -> CGRect {
-        let screenW = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-        let screenH = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-        var w = screenW
-        var h = w * ratio
-        
-        if h > screenH {
-            h = screenH
-            w = h / ratio
-        }
-        
-        return CGRect(x: 0, y: 0, width: w, height: h)
     }
     
     @objc
@@ -312,58 +320,6 @@ class EffectStreamIngestViewController: UIViewController {
         currentPosition = currentPosition == .back ? .front : .back
         if let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition) {
             try? effectStreamIngest?.attachCamera(device: camera)
-        }
-    }
-    
-    func correctView(to size: CGSize? = nil) {
-        // Set device orientation based on UI
-        let height = size?.height ?? UIScreen.main.bounds.height
-        let width = size?.width ?? UIScreen.main.bounds.width
-        
-        cameraPreviewView.center = CGPoint(x: width / 2, y: height / 2)
-        
-        switch currentDeviceOrientation() {
-        case .portrait:
-            cameraPreviewView.transform = .identity
-        case .portraitUpsideDown:
-            cameraPreviewView.transform = CGAffineTransform(rotationAngle: .pi)
-        case .landscapeLeft:
-            cameraPreviewView.transform = CGAffineTransform(rotationAngle: -.pi / 2)
-        case .landscapeRight:
-            cameraPreviewView.transform = CGAffineTransform(rotationAngle: .pi / 2)
-        default:
-            cameraPreviewView.transform = .identity
-        }
-    }
-    
-    func currentDeviceOrientation() -> UIDeviceOrientation {
-        guard (UIDevice.current.orientation != .portrait && 
-               UIDevice.current.orientation != .portraitUpsideDown &&
-               UIDevice.current.orientation != .landscapeRight && 
-               UIDevice.current.orientation != .landscapeLeft) else {
-            return UIDevice.current.orientation
-        }
-        
-        var orientation : UIInterfaceOrientation?
-        if #available(iOS 13.0, *) {
-            orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation
-        } else {
-            orientation = UIApplication.shared.statusBarOrientation
-        }
-        
-        switch orientation {
-        case .unknown:
-            return .portrait
-        case .portrait:
-            return .portrait
-        case .portraitUpsideDown:
-            return .portraitUpsideDown
-        case .landscapeLeft:
-            return .landscapeRight
-        case .landscapeRight:
-            return .landscapeLeft
-        default:
-            return .portrait
         }
     }
 }

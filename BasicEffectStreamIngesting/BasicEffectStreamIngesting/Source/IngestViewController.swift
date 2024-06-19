@@ -1,6 +1,6 @@
 //
 //  IngestViewController.swift
-//  BVStreamIngest
+//  RTMPusherExample
 //
 //  Created by Tsung Cheng Lo on 2024/1/9.
 //
@@ -11,14 +11,7 @@ import BVStreamIngest
 
 class IngestViewController: UIViewController {
     
-    lazy var stream: StreamIngest = {
-        let quality = Preference.shared.streamIngestQuality
-        let stream = StreamIngest()
-        stream.videoSize = quality.videoSize
-        stream.videoBitrate = quality.videoBitRate
-        stream.audioBitrate = quality.audioBitRate
-        return stream
-    }()
+    var stream: StreamIngest
     
     var previewView: StreamRenderView!
     
@@ -37,7 +30,16 @@ class IngestViewController: UIViewController {
     }()
     
     private var currentPosition: AVCaptureDevice.Position = .back
-
+    
+    init(streamIngest: StreamIngest) {
+        self.stream = streamIngest
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -106,10 +108,12 @@ class IngestViewController: UIViewController {
         
         stream.delegate = self
         stream.addObserver(self, forKeyPath: "currentFPS", options: .new, context: nil)
+        
         let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition)
         stream.attachCamera(camera, channel: 0) { error in
             debugPrint("attaching camera with error=\(String(describing: error))")
         }
+        
         stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
             debugPrint("attaching audio with error=\(String(describing: error))")
         }

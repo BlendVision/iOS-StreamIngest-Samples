@@ -1,6 +1,0 @@
-framework module PerfectLibFaceTrackingPlus {
-  umbrella header "PerfectLibFaceTrackingPlus.h"
-  export *
-
-  module * { export * }
-}

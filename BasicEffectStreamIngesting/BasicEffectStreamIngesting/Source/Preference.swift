@@ -4,8 +4,12 @@ import BVStreamIngest
 struct Preference {
     static var shared = Preference()
 
-    var uri: String? = "rtmp://93ab7d2777517f95b66457199b9fe9d4-main.jcl-prod-coco-d3.centre.kkstream.tech:1935/live/98df564b7b034917a80d2854095c27cf"
-    var streamName: String? = "98df564b7b034917a80d2854095c27cf"
+    var uri: String? = "rtmp://7c2f5dc49e9c3337ca32b574041d69e4-main.jcl-prod-coco-d3.centre.kkstream.tech:1935/live"
+    
+    var streamName: String? = "0ea216396fcd429eab7dfc42ddfc23f4"
+    
+    // LICwgI5FrfrSwRgL-hRrpwaB5ZdMz4v21QWNKCbOsTcR
+    var licenseKey: String = "LICwgI5FrfrSwRgL-hRrpwaB5ZdMz4v21QWNKCbOsTcR"
     
     static let backgroundColor = UIColor(red: 22.0/255, green: 20.0/255.0, blue: 21.0/255.0, alpha: 1.0)
     

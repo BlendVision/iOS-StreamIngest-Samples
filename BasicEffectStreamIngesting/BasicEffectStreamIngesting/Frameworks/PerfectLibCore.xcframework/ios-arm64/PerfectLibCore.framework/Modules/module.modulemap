@@ -1,6 +1,0 @@
-framework module PerfectLibCore {
-  umbrella header "PerfectLibCore.h"
-  export *
-
-  module * { export * }
-}
