@@ -210,10 +210,10 @@ extension IngestViewController: StreamIngestDelegate {
         debugPrint("streamIngestDidStopPublishing")
     }
     
-    func streamIngestDidFailToPublish(_ streamIngest: StreamIngest) {
+    func streamIngestDidFailToPublish(_ streamIngest: StreamIngest, with error: StreamIngestErrorEvent) {
         DispatchQueue.main.async {
-            let controller = UIAlertController(title: "Oops",
-                                               message: "Fail to publish",
+            let controller = UIAlertController(title: "Oops, Fail to publish",
+                                               message: error.code,
                                                preferredStyle: .alert)
             
             let okButton = UIAlertAction(title: "OK", style: .destructive) { _ in

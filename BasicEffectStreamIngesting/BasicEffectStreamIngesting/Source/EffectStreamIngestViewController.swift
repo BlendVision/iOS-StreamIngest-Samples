@@ -96,10 +96,9 @@ class EffectStreamIngestViewController: UIViewController {
             if authorized {
                 guard let self = self else { return }
                 guard let previewView = effectStreamIngest?.createCameraView(
-                    frame: .zero,
-                    aspectRatio: 16.0 / 9.0
+                    mode: .aspectFit
                 ) else { return }
-                
+                self.setScaleButton(previewView.scaleMode)
                 previewView.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview(previewView)
                 
@@ -235,6 +234,9 @@ class EffectStreamIngestViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         cameraPreviewView?.adjustRenderView(to: size)
+        // Enable orientation detection to adjust the video size automatically based on device orientation.
+        let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        streamIngest.videoOrientation = scene?.interfaceOrientation ?? .unknown
     }
     
     func requestCameraAuthentication(_ completion: @escaping (_ authorized: Bool)->Void) {
@@ -256,7 +258,7 @@ class EffectStreamIngestViewController: UIViewController {
     func showCameraAccessDenied() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            let alert = UIAlertController(title: "Camera Access Denied", 
+            let alert = UIAlertController(title: "Camera Access Denied",
                                           message: "Camera access is required. Please enable camera access for the app in Settings -> Privacy -> Camera.",
                                           preferredStyle: .alert)
             
@@ -283,6 +285,11 @@ class EffectStreamIngestViewController: UIViewController {
     @objc
     func on(switch: UIBarButtonItem) {
         rotateCamera()
+    }
+    
+    @objc
+    func changeMode(sender: UIBarButtonItem) {
+        changeScaleMode()
     }
     
     @objc
@@ -359,10 +366,10 @@ extension EffectStreamIngestViewController: StreamIngestDelegate {
         debugPrint("streamIngestDidStopPublishing")
     }
     
-    func streamIngestDidFailToPublish(_ streamIngest: StreamIngest) {
+    func streamIngestDidFailToPublish(_ streamIngest: StreamIngest, with error: StreamIngestErrorEvent) {
         DispatchQueue.main.async {
-            let controller = UIAlertController(title: "Oops",
-                                               message: "Fail to publish",
+            let controller = UIAlertController(title: "Oops, Fail to publish",
+                                               message: error.code,
                                                preferredStyle: .alert)
             
             let okButton = UIAlertAction(title: "OK", style: .destructive) { _ in
@@ -378,5 +385,27 @@ extension EffectStreamIngestViewController: StreamIngestDelegate {
         guard let rtmpUrl = Preference.shared.uri,
               let streamName = Preference.shared.streamName else { return }
         streamIngest.startPublish(rtmpUrl: rtmpUrl, stream: streamName)
+    }
+}
+
+extension EffectStreamIngestViewController: EffectStreamTestingControllable {
+    func changeScaleMode() {
+        cameraPreviewView?.switchScaleMode()
+        setScaleButton(cameraPreviewView?.scaleMode)
+    }
+    
+    func setScaleButton(_ mode: CameraPreviewView.ScaleMode?) {
+        let buttonImage = (mode == .aspectFill) ? "rectangle.compress.vertical" : "rectangle.expand.vertical"
+        if let button = self.navigationItem.rightBarButtonItems?.first(where: { $0.tag == 1 }) {
+            button.image = UIImage(systemName: buttonImage)
+        } else {
+            let button = UIBarButtonItem(
+                image: UIImage(systemName: buttonImage),
+                style: .plain,
+                target: self,
+                action: #selector(changeMode))
+            button.tag = 1
+            self.navigationItem.rightBarButtonItems?.append(button)
+        }
     }
 }
