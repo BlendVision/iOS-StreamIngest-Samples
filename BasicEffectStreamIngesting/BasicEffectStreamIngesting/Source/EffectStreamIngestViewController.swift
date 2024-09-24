@@ -70,6 +70,9 @@ class EffectStreamIngestViewController: UIViewController {
         
         effectStreamIngest = EffectStreamIngest(streamIngest: streamIngest)
         effectStreamIngest?.delegate = self
+        /* To enable face only filter
+        effectStreamIngest?.filterConfig.enableSkinSmoothFaceOnly = true
+         */
         
         view.backgroundColor = .black
         
@@ -98,24 +101,34 @@ class EffectStreamIngestViewController: UIViewController {
                 guard let previewView = effectStreamIngest?.createCameraView(
                     mode: .aspectFit
                 ) else { return }
-                self.setScaleButton(previewView.scaleMode)
-                previewView.translatesAutoresizingMaskIntoConstraints = false
-                view.addSubview(previewView)
-                
-                NSLayoutConstraint.activate([
-                    previewView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                    previewView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                    previewView.topAnchor.constraint(equalTo: view.topAnchor),
-                    previewView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-                ])
-                
-                cameraPreviewView = previewView
+                setupCameraView(previewView)
+                setScaleButton(previewView.scaleMode)
                 setupViews()
             }
             else {
                 self?.showCameraAccessDenied()
             }
         }
+    }
+    
+    func setupCameraView(_ preview: CameraPreviewView) {
+        if let oldPreview = cameraPreviewView,
+           let index = self.view.subviews.firstIndex(of: oldPreview) {
+            oldPreview.removeFromSuperview()
+            self.view.insertSubview(preview, at: index)
+        } else {
+            self.view.addSubview(preview)
+        }
+        
+        preview.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            preview.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            preview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            preview.topAnchor.constraint(equalTo: self.view.topAnchor),
+            preview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ])
+        
+        cameraPreviewView = preview
     }
     
     func setupViews() {
@@ -329,6 +342,32 @@ class EffectStreamIngestViewController: UIViewController {
             try? effectStreamIngest?.attachCamera(device: camera)
         }
     }
+    
+    func reconnect() {
+        guard let rtmpUrl = Preference.shared.uri,
+              let streamName = Preference.shared.streamName else { return }
+        streamIngest.startPublish(rtmpUrl: rtmpUrl, stream: streamName)
+    }
+    
+    func changeScaleMode() {
+        cameraPreviewView?.switchScaleMode()
+        setScaleButton(cameraPreviewView?.scaleMode)
+    }
+    
+    func setScaleButton(_ mode: CameraPreviewView.ScaleMode?) {
+        let buttonImage = (mode == .aspectFill) ? "rectangle.compress.vertical" : "rectangle.expand.vertical"
+        if let button = self.navigationItem.rightBarButtonItems?.first(where: { $0.tag == 1 }) {
+            button.image = UIImage(systemName: buttonImage)
+        } else {
+            let button = UIBarButtonItem(
+                image: UIImage(systemName: buttonImage),
+                style: .plain,
+                target: self,
+                action: #selector(changeMode))
+            button.tag = 1
+            self.navigationItem.rightBarButtonItems?.append(button)
+        }
+    }
 }
 
 extension EffectStreamIngestViewController {
@@ -352,6 +391,23 @@ extension EffectStreamIngestViewController: EffectStreamIngestDelegate {
             if let effect = ingest.getEffect(with: .skinSmooth) as? SkinSmoothEffect {
                 skinSmoothSlider.value = Float(effect.intensity) / 100
             }
+        }
+    }
+    
+    func effectStreamIngestSwitchToUnfiltered(_ ingest: BVStreamIngest.EffectStreamIngest) {
+        debugPrint("effectStreamIngestSwitchToUnfiltered")
+
+        // Attach the camera for stream ingest without applying any filters
+           if let device = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                   for: .video,
+                                                   position: currentPosition) {
+               try? ingest.attachCamera(device: device)
+           }
+           
+        // Switch to unfiltered preview
+        DispatchQueue.main.async {
+            guard let preview = ingest.createCameraView(mode: .aspectFill) else { return }
+            self.setupCameraView(preview)
         }
     }
 }
@@ -381,31 +437,11 @@ extension EffectStreamIngestViewController: StreamIngestDelegate {
         }
     }
     
-    func reconnect() {
-        guard let rtmpUrl = Preference.shared.uri,
-              let streamName = Preference.shared.streamName else { return }
-        streamIngest.startPublish(rtmpUrl: rtmpUrl, stream: streamName)
-    }
-}
-
-extension EffectStreamIngestViewController: EffectStreamTestingControllable {
-    func changeScaleMode() {
-        cameraPreviewView?.switchScaleMode()
-        setScaleButton(cameraPreviewView?.scaleMode)
+    func streamIngestDidStartRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
+        debugPrint("streamIngestDidStartRetrying")
     }
     
-    func setScaleButton(_ mode: CameraPreviewView.ScaleMode?) {
-        let buttonImage = (mode == .aspectFill) ? "rectangle.compress.vertical" : "rectangle.expand.vertical"
-        if let button = self.navigationItem.rightBarButtonItems?.first(where: { $0.tag == 1 }) {
-            button.image = UIImage(systemName: buttonImage)
-        } else {
-            let button = UIBarButtonItem(
-                image: UIImage(systemName: buttonImage),
-                style: .plain,
-                target: self,
-                action: #selector(changeMode))
-            button.tag = 1
-            self.navigationItem.rightBarButtonItems?.append(button)
-        }
+    func streamIngestDidStopRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
+        debugPrint("streamIngestDidStopRetrying")
     }
 }

@@ -224,4 +224,12 @@ extension IngestViewController: StreamIngestDelegate {
             self.present(controller, animated: true)
         }
     }
+    
+    func streamIngestDidStartRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
+        debugPrint("streamIngestDidStartRetrying")
+    }
+    
+    func streamIngestDidStopRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
+        debugPrint("streamIngestDidStopRetrying")
+    }
 }
