@@ -4,10 +4,10 @@
     {
       "identity" : "ios-streamingest-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/BlendVision/iOS-StreamIngest-SDK.git",
+      "location" : "https://github.com/BlendVision/iOS-StreamIngest-SDK",
       "state" : {
-        "revision" : "56c0791813a68f221041ead3c920a3320862aa36",
-        "version" : "2.1.0"
+        "revision" : "7c27fa054c855c72f9ffdcca6e5b7751db7db0df",
+        "version" : "2.2.0"
       }
     }
   ],
