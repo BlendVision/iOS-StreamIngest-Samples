@@ -54,14 +54,8 @@ do {
 ### Ingest
 ```swift
 // Create an StreamIngest instance with your desired configurations
-lazy var stream: StreamIngest = {
-    let quality = Preference.shared.streamIngestQuality
-    let stream = StreamIngest()
-    stream.videoSize = quality.videoSize
-    stream.videoBitrate = quality.videoBitRate
-    stream.audioBitrate = quality.audioBitRate
-    return stream
-}()
+let config = StreamIngestConfig(key: "licenseKey")
+let stream = try await StreamIngest.create(with: config)
 
 // Create a StreamRenderView and add it into your subview
 previewView = StreamRenderView()
@@ -100,11 +94,11 @@ These configurations are:
 ### Audio Settings
 ```swift
 let quality = StreamIngestQualityMedium()
-stream.audioBitrate = quality.audioBitRate
+stream.audioBitrate = await quality.audioBitRate()
 ```
 ### Video Settings
 ```swift
 let quality = StreamIngestQualityMedium()
-stream.videoSize = quality.videoSize
-stream.videoBitrate = quality.videoBitRate
+stream.videoSize = await quality.videoSize()
+stream.videoBitrate = await quality.videoBitRate()
 ```
