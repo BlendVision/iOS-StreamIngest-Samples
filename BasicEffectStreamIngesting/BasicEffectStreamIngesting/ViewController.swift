@@ -193,9 +193,9 @@ class ViewController: UIViewController {
     func createStreamIngest(with config: StreamIngestConfig) async throws -> StreamIngest? {
         let stream = try await StreamIngest.create(with: config)
         let quality = Preference.shared.streamIngestQuality
-        stream?.videoSize = quality.videoSize
-        stream?.videoBitrate = quality.videoBitRate
-        stream?.audioBitrate = quality.audioBitRate
+        stream?.videoSize = await quality.videoSize()
+        stream?.videoBitrate = await quality.videoBitRate()
+        stream?.audioBitrate = await quality.audioBitRate()
         return stream
     }
     

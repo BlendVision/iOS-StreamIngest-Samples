@@ -12,5 +12,5 @@ struct Preference {
     
     static let backgroundColor = UIColor(red: 22.0/255, green: 20.0/255.0, blue: 21.0/255.0, alpha: 1.0)
     
-    var streamIngestQuality: StreamIngestQuality = StreamIngestQualityMedium()
+    var streamIngestQuality: StreamIngestQuality = StreamIngestQualityAuto()
 }
