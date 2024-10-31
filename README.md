@@ -90,6 +90,8 @@ These configurations are:
 
 - StreamIngestQualityHigh(): This setting is ideal for scenarios requiring high definition and high frame rates, offering superior video quality but potentially consuming more bandwidth and network resources.
 
+- StreamIngestQualityAuto(): Automatically selects Medium or Low quality based on network type.
+
 
 ### Audio Settings
 ```swift
