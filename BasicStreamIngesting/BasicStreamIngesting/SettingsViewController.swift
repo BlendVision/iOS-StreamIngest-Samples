@@ -13,7 +13,8 @@ class SettingsViewController: UITableViewController {
     let options: [StreamIngestQuality] = [
         StreamIngestQualityLow(),
         StreamIngestQualityMedium(),
-        StreamIngestQualityHigh()
+        StreamIngestQualityHigh(),
+        StreamIngestQualityAuto()
     ]
 
     override func viewDidLoad() {

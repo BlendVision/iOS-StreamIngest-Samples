@@ -11,14 +11,9 @@ import BVStreamIngest
 
 class IngestViewController: UIViewController {
     
-    lazy var stream: StreamIngest = {
-        let quality = Preference.shared.streamIngestQuality
-        let stream = StreamIngest()
-        stream.videoSize = quality.videoSize
-        stream.videoBitrate = quality.videoBitRate
-        stream.audioBitrate = quality.audioBitRate
-        return stream
-    }()
+    var stream: StreamIngest?
+    
+    let licenseKey: String = "Your-license-key"
     
     var previewView: StreamRenderView!
     
@@ -104,28 +99,32 @@ class IngestViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        stream.delegate = self
-        stream.addObserver(self, forKeyPath: "currentFPS", options: .new, context: nil)
-        let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition)
-        stream.attachCamera(camera, channel: 0) { error in
-            debugPrint("attaching camera with error=\(String(describing: error))")
+        Task {
+            guard let stream = try? await createStreamIngest(with: StreamIngestConfig(key: licenseKey)) else { return }
+            self.stream = stream
+            stream.delegate = self
+            stream.addObserver(self, forKeyPath: "currentFPS", options: .new, context: nil)
+            let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition)
+            stream.attachCamera(camera, channel: 0) { error in
+                debugPrint("attaching camera with error=\(String(describing: error))")
+            }
+            stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
+                debugPrint("attaching audio with error=\(String(describing: error))")
+            }
+            previewView.attachStream(stream)
+            UIApplication.shared.isIdleTimerDisabled = true
+            
         }
-        stream.attachAudio(AVCaptureDevice.default(for: .audio)) { error in
-            debugPrint("attaching audio with error=\(String(describing: error))")
-        }
-        
-        previewView.attachStream(stream)
-        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        stream.delegate = nil
-        stream.removeObserver(self, forKeyPath: "currentFPS")
-        stream.close()
-        stream.attachCamera(nil, channel: 0)
-        stream.attachAudio(nil)
+        stream?.delegate = nil
+        stream?.removeObserver(self, forKeyPath: "currentFPS")
+        stream?.close()
+        stream?.attachCamera(nil, channel: 0)
+        stream?.attachAudio(nil)
         
         UIApplication.shared.isIdleTimerDisabled = false
     }
@@ -133,7 +132,7 @@ class IngestViewController: UIViewController {
     @objc
     func on(_ sender: Notification) {
         let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-        stream.videoOrientation = scene?.interfaceOrientation ?? .unknown
+        stream?.videoOrientation = scene?.interfaceOrientation ?? .unknown
     }
     
     @objc
@@ -141,9 +140,9 @@ class IngestViewController: UIViewController {
         guard let rtmpUrl = Preference.shared.uri, let streamName = Preference.shared.streamName else { return }
         
         if publish.isSelected {
-            stream.stopPublish()
+            stream?.stopPublish()
         } else {
-            stream.startPublish(rtmpUrl: rtmpUrl, stream: streamName)
+            stream?.startPublish(rtmpUrl: rtmpUrl, stream: streamName)
         }
         publish.isSelected.toggle()
     }
@@ -162,7 +161,7 @@ class IngestViewController: UIViewController {
         }
         
         pause.isSelected.toggle()
-        stream.paused = pause.isSelected
+        stream?.paused = pause.isSelected
     }
     
     @objc
@@ -175,10 +174,19 @@ class IngestViewController: UIViewController {
         switchCamera()
     }
     
-    func switchCamera() {
+    private func switchCamera() {
         currentPosition = currentPosition == .back ? .front : .back
         let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: currentPosition)
-        stream.attachCamera(camera, channel: 0)
+        stream?.attachCamera(camera, channel: 0)
+    }
+    
+    private func createStreamIngest(with config: StreamIngestConfig) async throws -> StreamIngest? {
+        let stream = try await StreamIngest.create(with: config)
+        let quality = Preference.shared.streamIngestQuality
+        stream?.videoSize = await quality.videoSize()
+        stream?.videoBitrate = await quality.videoBitRate()
+        stream?.audioBitrate = await quality.audioBitRate()
+        return stream
     }
 }
 
@@ -189,8 +197,8 @@ extension IngestViewController {
                                       change: [NSKeyValueChangeKey: Any]?,
                                       context: UnsafeMutableRawPointer?) {
         if Thread.isMainThread {
-            let fps = stream.currentFPS
-            let bps = stream.info?.currentBytesPerSecond ?? 0
+            let fps = stream?.currentFPS
+            let bps = stream?.info?.currentBytesPerSecond ?? 0
             infoLabel.text = "FPS: \(fps)\nBytes Per Seconds: \(bps)"
         }
     }
@@ -206,7 +214,15 @@ extension IngestViewController: StreamIngestDelegate {
         debugPrint("streamIngestDidStopPublishing")
     }
     
-    func streamIngestDidFailToPublish(_ streamIngest: StreamIngest) {
+    func streamIngestDidStartRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
+        debugPrint("streamIngestDidStartRetrying")
+    }
+    
+    func streamIngestDidStopRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
+        debugPrint("streamIngestDidStopRetrying")
+    }
+    
+    func streamIngestDidFailToPublish(_ streamIngest: BVStreamIngest.StreamIngest, with error: BVStreamIngest.StreamIngestErrorEvent) {
         DispatchQueue.main.async {
             let controller = UIAlertController(title: "Oops",
                                                message: "Faile to publish",
