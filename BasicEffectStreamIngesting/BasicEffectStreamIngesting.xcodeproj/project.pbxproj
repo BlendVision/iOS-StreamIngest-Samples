@@ -23,8 +23,10 @@
 		0C49DF6B2BB692CA00381053 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C49DF6A2BB692CA00381053 /* bv-streamingest */; };
 		0C8EB52C2BF1E95E00D1EBCB /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C8EB52B2BF1E95E00D1EBCB /* bv-streamingest */; };
 		0C9AA7E62C00268700A167ED /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = 0C9AA7E52C00268700A167ED /* bv-streamingest */; };
+		A38B058E2CDCC4C300D0B54E /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A38B058D2CDCC4C300D0B54E /* bv-streamingest */; };
 		A39A61992CA2942200DC2B21 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A39A61982CA2942200DC2B21 /* bv-streamingest */; };
-		A3BA1D4D2CD370BA00E4BDF1 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A3BA1D4C2CD370BA00E4BDF1 /* bv-streamingest */; };
+		A3A62B4A2CE73E3D006D9748 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A3A62B492CE73E3D006D9748 /* bv-streamingest */; };
+		A3A62B4D2CE74A24006D9748 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A3A62B4C2CE74A24006D9748 /* bv-streamingest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +51,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9AA7E62C00268700A167ED /* bv-streamingest in Frameworks */,
-				A3BA1D4D2CD370BA00E4BDF1 /* bv-streamingest in Frameworks */,
+				A38B058E2CDCC4C300D0B54E /* bv-streamingest in Frameworks */,
+				A3A62B4A2CE73E3D006D9748 /* bv-streamingest in Frameworks */,
 				0C49DF6B2BB692CA00381053 /* bv-streamingest in Frameworks */,
+				A3A62B4D2CE74A24006D9748 /* bv-streamingest in Frameworks */,
 				0C2BCF4F2BB693490086C4B3 /* bv-streamingest in Frameworks */,
 				0C8EB52C2BF1E95E00D1EBCB /* bv-streamingest in Frameworks */,
 				A39A61992CA2942200DC2B21 /* bv-streamingest in Frameworks */,
@@ -127,7 +131,9 @@
 				0C8EB52B2BF1E95E00D1EBCB /* bv-streamingest */,
 				0C9AA7E52C00268700A167ED /* bv-streamingest */,
 				A39A61982CA2942200DC2B21 /* bv-streamingest */,
-				A3BA1D4C2CD370BA00E4BDF1 /* bv-streamingest */,
+				A38B058D2CDCC4C300D0B54E /* bv-streamingest */,
+				A3A62B492CE73E3D006D9748 /* bv-streamingest */,
+				A3A62B4C2CE74A24006D9748 /* bv-streamingest */,
 			);
 			productName = BasicEffectStreamIngesting;
 			productReference = 0C49DF3D2BB66B6D00381053 /* BasicEffectStreamIngesting.app */;
@@ -158,7 +164,7 @@
 			);
 			mainGroup = 0C49DF342BB66B6D00381053;
 			packageReferences = (
-				A3BA1D4B2CD370BA00E4BDF1 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */,
+				A3A62B4B2CE74A24006D9748 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */,
 			);
 			productRefGroup = 0C49DF3E2BB66B6D00381053 /* Products */;
 			projectDirPath = "";
@@ -435,12 +441,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A3BA1D4B2CD370BA00E4BDF1 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */ = {
+		A3A62B4B2CE74A24006D9748 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/BlendVision/iOS-StreamIngest-SDK";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.0;
+				minimumVersion = 2.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -466,13 +472,21 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = "bv-streamingest";
 		};
+		A38B058D2CDCC4C300D0B54E /* bv-streamingest */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "bv-streamingest";
+		};
 		A39A61982CA2942200DC2B21 /* bv-streamingest */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "bv-streamingest";
 		};
-		A3BA1D4C2CD370BA00E4BDF1 /* bv-streamingest */ = {
+		A3A62B492CE73E3D006D9748 /* bv-streamingest */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A3BA1D4B2CD370BA00E4BDF1 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */;
+			productName = "bv-streamingest";
+		};
+		A3A62B4C2CE74A24006D9748 /* bv-streamingest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3A62B4B2CE74A24006D9748 /* XCRemoteSwiftPackageReference "iOS-StreamIngest-SDK" */;
 			productName = "bv-streamingest";
 		};
 /* End XCSwiftPackageProductDependency section */

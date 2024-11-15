@@ -232,4 +232,9 @@ extension IngestViewController: StreamIngestDelegate {
     func streamIngestDidStopRetrying(_ streamIngest: BVStreamIngest.StreamIngest) {
         debugPrint("streamIngestDidStopRetrying")
     }
+    
+    func streamIngestDidUpdateBufferStatus(_ streamIngest: BVStreamIngest.StreamIngest, with status: BVStreamIngest.StreamIngestBufferState) {
+        debugPrint("streamIngestDidUpdateBufferStatus: \(status)")
+    }
+    
 }
