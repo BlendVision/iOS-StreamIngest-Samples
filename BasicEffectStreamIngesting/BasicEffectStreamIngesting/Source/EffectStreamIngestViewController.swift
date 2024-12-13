@@ -58,13 +58,22 @@ class EffectStreamIngestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        streamIngest.requestAuthentication { error in
-            if let error {
-                debugPrint("Authority error = \(error)")
-            } else {
-                debugPrint("StreamIngest SDK authority success")
-            }
-        }
+        // MARK: - Authentication
+        // ⚠️ Do NOT call requestAuthentication() method
+        // Authentication is automatically handled by the SDK initialization
+        /**
+         * The requestAuthentication() method is not required here.
+         * Authentication is automatically handled when creating StreamIngest instance.
+         *
+         * Example of unnecessary code:
+         * streamIngest.requestAuthentication { error in
+         *     if let error {
+         *       debugPrint("Authority error = \(error)")
+         *     } else {
+         *       debugPrint("StreamIngest SDK authority success")
+         *     }
+         * }
+         */
         
         streamIngest.delegate = self
         
@@ -446,7 +455,7 @@ extension EffectStreamIngestViewController: StreamIngestDelegate {
     }
     
     func streamIngestDidUpdateBufferStatus(_ streamIngest: BVStreamIngest.StreamIngest, with status: BVStreamIngest.StreamIngestBufferState) {
-        debugPrint("streamIngestDidUpdateBufferStatus: \(status)")
+        debugPrint("streamIngestDidUpdateBufferStatus: \(status.status)")
     }
     
 }
