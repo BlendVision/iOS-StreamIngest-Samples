@@ -1,4 +1,14 @@
 # BlendVision Stream Ingest iOS Samples
+
+This sample project demonstrates the usage of BlendVision Stream Ingest SDK (dev branch).
+For development and testing purposes, this sample connects to the SDK's development branch via SPM
+```swift
+https://github.com/BlendVision/iOS-StreamIngest-SDK.git
+Branch: `dev`
+```
+
+> **Note**: This sample uses the development version of the SDK which may include unstable or experimental features. For production use, please use the stable release version.
+
 Stream From Your App
 To set up a streaming source and transmit it to BlendVision's live streaming service via a RTMP link from your own applications.
 
