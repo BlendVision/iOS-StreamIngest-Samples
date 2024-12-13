@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/BlendVision/iOS-StreamIngest-SDK",
       "state" : {
-        "revision" : "30c0bad702461296cdd63dcc5a5af58510b4cb10",
-        "version" : "2.4.0"
+        "branch" : "dev",
+        "revision" : "a596221467dceb7a14b052788a9f89f0621d9dc6"
       }
     }
   ],
