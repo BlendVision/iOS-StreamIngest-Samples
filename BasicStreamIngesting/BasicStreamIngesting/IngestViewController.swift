@@ -236,4 +236,7 @@ extension IngestViewController: StreamIngestDelegate {
             self.present(controller, animated: true)
         }
     }
+    
+    func streamIngestDidUpdateBufferStatus(_ streamIngest: BVStreamIngest.StreamIngest, with status: BVStreamIngest.StreamIngestBufferState) {
+    }
 }
