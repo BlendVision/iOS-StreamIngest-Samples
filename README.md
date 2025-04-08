@@ -105,7 +105,6 @@ let quality = StreamIngestQualityMedium()
 stream.videoSize = await quality.videoSize()
 stream.videoBitrate = await quality.videoBitRate()
 ```
-當然可以，這是一個簡潔明瞭的 Q&A 版本，適合放在 FAQ 區：
 
 ---
 
