@@ -105,3 +105,16 @@ let quality = StreamIngestQualityMedium()
 stream.videoSize = await quality.videoSize()
 stream.videoBitrate = await quality.videoBitRate()
 ```
+當然可以，這是一個簡潔明瞭的 Q&A 版本，適合放在 FAQ 區：
+
+---
+
+## FAQ
+
+### Why is the FPS low (e.g., 15 FPS) when streaming on iOS?
+
+This issue occurs on **iOS 18.3.x** (e.g., 18.3.1, 18.3.3) **only when the Perfect Beauty Module is enabled**.  
+It was not reproducible during initial testing on iOS 18.0, and has been resolved in **iOS 18.4 and above**.  
+If you encounter low FPS, please upgrade to **iOS 18.4 or later**.
+
+---
