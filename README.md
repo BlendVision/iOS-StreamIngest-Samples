@@ -107,3 +107,12 @@ stream.videoBitrate = await quality.videoBitRate()
 ```
 
 ---
+## FAQ
+
+### Q: Why doesn't the remote stream update when changing screen orientation during streaming?
+
+**A:**  
+Changing screen orientation during an active stream is not supported.  
+To update the remote display with the correct orientation, please stop the current stream first, then restart streaming after changing the orientation.
+
+---
