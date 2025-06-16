@@ -18,6 +18,8 @@
 		0C49DF5E2BB66F1500381053 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF592BB66F1500381053 /* Preference.swift */; };
 		0C49DF5F2BB66F1500381053 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF5A2BB66F1500381053 /* SettingsViewController.swift */; };
 		0C49DF612BB6707200381053 /* EffectStreamIngestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49DF602BB6707200381053 /* EffectStreamIngestViewController.swift */; };
+		0CC8DF4E2DFFB07B000A052F /* SampleTestingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8DF4C2DFFB07B000A052F /* SampleTestingManager.swift */; };
+		0CC8DF4F2DFFB07B000A052F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8DF4B2DFFB07B000A052F /* LogViewController.swift */; };
 		A318BD952D77101700235F61 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A318BD942D77101700235F61 /* bv-streamingest */; };
 		A318BD982D7716E000235F61 /* bv-streamingest in Frameworks */ = {isa = PBXBuildFile; productRef = A318BD972D7716E000235F61 /* bv-streamingest */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		0C49DF592BB66F1500381053 /* Preference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		0C49DF5A2BB66F1500381053 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C49DF602BB6707200381053 /* EffectStreamIngestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectStreamIngestViewController.swift; sourceTree = "<group>"; };
+		0CC8DF4B2DFFB07B000A052F /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
+		0CC8DF4C2DFFB07B000A052F /* SampleTestingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTestingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		0C49DF5B2BB66F1500381053 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0CC8DF4D2DFFB07B000A052F /* TestTool */,
 				0C49DF602BB6707200381053 /* EffectStreamIngestViewController.swift */,
 				0C49DF572BB66F1500381053 /* ControlView.swift */,
 				0C49DF582BB66F1500381053 /* IngestViewController.swift */,
@@ -105,6 +110,15 @@
 				0C49DF5A2BB66F1500381053 /* SettingsViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0CC8DF4D2DFFB07B000A052F /* TestTool */ = {
+			isa = PBXGroup;
+			children = (
+				0CC8DF4B2DFFB07B000A052F /* LogViewController.swift */,
+				0CC8DF4C2DFFB07B000A052F /* SampleTestingManager.swift */,
+			);
+			path = TestTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +202,8 @@
 			files = (
 				0C49DF5C2BB66F1500381053 /* ControlView.swift in Sources */,
 				0C49DF452BB66B6D00381053 /* ViewController.swift in Sources */,
+				0CC8DF4E2DFFB07B000A052F /* SampleTestingManager.swift in Sources */,
+				0CC8DF4F2DFFB07B000A052F /* LogViewController.swift in Sources */,
 				0C49DF5F2BB66F1500381053 /* SettingsViewController.swift in Sources */,
 				0C49DF612BB6707200381053 /* EffectStreamIngestViewController.swift in Sources */,
 				0C49DF412BB66B6D00381053 /* AppDelegate.swift in Sources */,
@@ -447,7 +463,7 @@
 			repositoryURL = "https://github.com/BlendVision/iOS-StreamIngest-SDK";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = "3.0.0-beta.1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
