@@ -463,7 +463,7 @@
 			repositoryURL = "https://github.com/BlendVision/iOS-StreamIngest-SDK";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "3.0.0-beta.1";
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
